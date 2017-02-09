@@ -76,7 +76,16 @@ namespace Daddy_Jobs
                 DateTime thisDay = DateTime.Today;
                 AddWork(13, 1, IdDevice, 6, thisDay.ToString("d"), "");//Прием устройства
                 label25.Text = "Код принятого устройства: " + IdDevice;
-                //label25.Visible = true;
+                label25.Visible = true;
+                bool[] val = { false, false, false, false, false, false, false, false, false, false };
+                foreach (int indexChecked in checkedListBox1.CheckedIndices)
+                {
+                    //MessageBox.Show("Index#: " + indexChecked.ToString() + ", is checked. Checked state is:" +
+                     //               checkedListBox1.GetItemCheckState(indexChecked).ToString() + ".");
+                    val[indexChecked] = true;
+                }
+
+                AddInspection(IdDevice, thisDay.ToString("d"),val[0], val[1], val[2], val[6], val[4], val[5], val[7], val[3], val[8], val[9],);
             }
             
         }
