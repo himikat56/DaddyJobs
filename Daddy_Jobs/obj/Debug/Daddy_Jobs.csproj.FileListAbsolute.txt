@@ -1,0 +1,40 @@
+c:\users\himikat\documents\visual studio 2015\Projects\Daddy_Jobs\Daddy_Jobs\bin\Debug\Daddy_Jobs.exe.config
+C:\Users\hImIkAt\documents\visual studio 2015\Projects\Daddy_Jobs\Daddy_Jobs\bin\Debug\Daddy_Jobs.exe
+C:\Users\hImIkAt\documents\visual studio 2015\Projects\Daddy_Jobs\Daddy_Jobs\bin\Debug\Daddy_Jobs.pdb
+C:\Users\hImIkAt\documents\visual studio 2015\Projects\Daddy_Jobs\Daddy_Jobs\obj\Debug\Daddy_Jobs.csprojResolveAssemblyReference.cache
+C:\Users\hImIkAt\documents\visual studio 2015\Projects\Daddy_Jobs\Daddy_Jobs\obj\Debug\Daddy_Jobs.Form1.resources
+C:\Users\hImIkAt\documents\visual studio 2015\Projects\Daddy_Jobs\Daddy_Jobs\obj\Debug\Daddy_Jobs.Properties.Resources.resources
+C:\Users\hImIkAt\documents\visual studio 2015\Projects\Daddy_Jobs\Daddy_Jobs\obj\Debug\Daddy_Jobs.csproj.GenerateResource.Cache
+C:\Users\hImIkAt\documents\visual studio 2015\Projects\Daddy_Jobs\Daddy_Jobs\obj\Debug\Daddy_Jobs.exe
+C:\Users\hImIkAt\documents\visual studio 2015\Projects\Daddy_Jobs\Daddy_Jobs\obj\Debug\Daddy_Jobs.pdb
+C:\Users\Роман\Documents\Visual Studio 2015\Projects\Daddy_Jobs\Daddy_Jobs\Daddy_Jobs\bin\Debug\Daddy_Jobs.exe.config
+C:\Users\Роман\Documents\Visual Studio 2015\Projects\Daddy_Jobs\Daddy_Jobs\Daddy_Jobs\obj\Debug\Daddy_Jobs.exe
+C:\Users\Роман\Documents\Visual Studio 2015\Projects\Daddy_Jobs\Daddy_Jobs\Daddy_Jobs\obj\Debug\Daddy_Jobs.pdb
+C:\Users\Роман\Documents\Visual Studio 2015\Projects\Daddy_Jobs\Daddy_Jobs\Daddy_Jobs\obj\Debug\Daddy_Jobs.csprojResolveAssemblyReference.cache
+C:\Users\Роман\Documents\Visual Studio 2015\Projects\Daddy_Jobs\Daddy_Jobs\Daddy_Jobs\obj\Debug\Daddy_Jobs.Form1.resources
+C:\Users\Роман\Documents\Visual Studio 2015\Projects\Daddy_Jobs\Daddy_Jobs\Daddy_Jobs\obj\Debug\Daddy_Jobs.Properties.Resources.resources
+C:\Users\Роман\Documents\Visual Studio 2015\Projects\Daddy_Jobs\Daddy_Jobs\Daddy_Jobs\obj\Debug\Daddy_Jobs.csproj.GenerateResource.Cache
+C:\Users\Роман\Documents\Visual Studio 2015\Projects\Daddy_Jobs\Daddy_Jobs\Daddy_Jobs\bin\Debug\Daddy_Jobs.exe
+C:\Users\Роман\Documents\Visual Studio 2015\Projects\Daddy_Jobs\Daddy_Jobs\Daddy_Jobs\bin\Debug\Daddy_Jobs.pdb
+C:\Users\Роман\Documents\Visual Studio 2015\Projects\Daddy_Jobs\Daddy_Jobs\Daddy_Jobs\obj\Debug\Daddy_Jobs.Form2.resources
+C:\Users\hImIkAt\documents\visual studio 2015\Projects\Daddy_Jobs\Daddy_Jobs\obj\Debug\Daddy_Jobs.Form2.resources
+E:\Desctop\Daddy_Jobs\Daddy_Jobs\bin\Debug\Daddy_Jobs.exe.config
+E:\Desctop\Daddy_Jobs\Daddy_Jobs\obj\Debug\Daddy_Jobs.exe
+E:\Desctop\Daddy_Jobs\Daddy_Jobs\obj\Debug\Daddy_Jobs.pdb
+E:\Desctop\Daddy_Jobs\Daddy_Jobs\bin\Debug\Daddy_Jobs.exe
+E:\Desctop\Daddy_Jobs\Daddy_Jobs\bin\Debug\Daddy_Jobs.pdb
+E:\Desctop\Daddy_Jobs\Daddy_Jobs\obj\Debug\Daddy_Jobs.csprojResolveAssemblyReference.cache
+E:\Desctop\Daddy_Jobs\Daddy_Jobs\obj\Debug\Daddy_Jobs.Form1.resources
+E:\Desctop\Daddy_Jobs\Daddy_Jobs\obj\Debug\Daddy_Jobs.Form2.resources
+E:\Desctop\Daddy_Jobs\Daddy_Jobs\obj\Debug\Daddy_Jobs.Properties.Resources.resources
+E:\Desctop\Daddy_Jobs\Daddy_Jobs\obj\Debug\Daddy_Jobs.csproj.GenerateResource.Cache
+C:\Users\Роман\Documents\Visual Studio 2015\Projects\Daddy_Jobs\Daddy_Jobs\bin\Debug\Daddy_Jobs.exe.config
+C:\Users\Роман\Documents\Visual Studio 2015\Projects\Daddy_Jobs\Daddy_Jobs\obj\Debug\Daddy_Jobs.exe
+C:\Users\Роман\Documents\Visual Studio 2015\Projects\Daddy_Jobs\Daddy_Jobs\obj\Debug\Daddy_Jobs.pdb
+C:\Users\Роман\Documents\Visual Studio 2015\Projects\Daddy_Jobs\Daddy_Jobs\bin\Debug\Daddy_Jobs.exe
+C:\Users\Роман\Documents\Visual Studio 2015\Projects\Daddy_Jobs\Daddy_Jobs\bin\Debug\Daddy_Jobs.pdb
+C:\Users\Роман\Documents\Visual Studio 2015\Projects\Daddy_Jobs\Daddy_Jobs\obj\Debug\Daddy_Jobs.csprojResolveAssemblyReference.cache
+C:\Users\Роман\Documents\Visual Studio 2015\Projects\Daddy_Jobs\Daddy_Jobs\obj\Debug\Daddy_Jobs.Form1.resources
+C:\Users\Роман\Documents\Visual Studio 2015\Projects\Daddy_Jobs\Daddy_Jobs\obj\Debug\Daddy_Jobs.Form2.resources
+C:\Users\Роман\Documents\Visual Studio 2015\Projects\Daddy_Jobs\Daddy_Jobs\obj\Debug\Daddy_Jobs.Properties.Resources.resources
+C:\Users\Роман\Documents\Visual Studio 2015\Projects\Daddy_Jobs\Daddy_Jobs\obj\Debug\Daddy_Jobs.csproj.GenerateResource.Cache
