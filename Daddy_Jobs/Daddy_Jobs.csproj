@@ -79,6 +79,11 @@
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Original_DaddyJobs.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Original_DaddyJobs.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -140,6 +145,17 @@
     </None>
     <None Include="Daddy_JobsDataSet.xss">
       <DependentUpon>Daddy_JobsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Original_DaddyJobs.xsc">
+      <DependentUpon>Original_DaddyJobs.xsd</DependentUpon>
+    </None>
+    <None Include="Original_DaddyJobs.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Original_DaddyJobs.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Original_DaddyJobs.xss">
+      <DependentUpon>Original_DaddyJobs.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

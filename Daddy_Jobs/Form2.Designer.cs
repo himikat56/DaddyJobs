@@ -64,15 +64,25 @@
             this.помощьToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.label23 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.textBox13 = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.sparepartBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.nameofworkBindingSource7 = new System.Windows.Forms.BindingSource(this.components);
+            this.original_DaddyJobs = new Daddy_Jobs.Original_DaddyJobs();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.daddy_JobsDataSet1 = new Daddy_Jobs.Daddy_JobsDataSet();
             this.button3 = new System.Windows.Forms.Button();
@@ -83,8 +93,9 @@
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
-            this.textBox11 = new System.Windows.Forms.TextBox();
             this.textBox12 = new System.Windows.Forms.TextBox();
+            this.nameofworkBindingSource5 = new System.Windows.Forms.BindingSource(this.components);
+            this.nameofworkBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label10 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label20 = new System.Windows.Forms.Label();
@@ -101,9 +112,25 @@
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.manufacturerTableAdapter = new Daddy_Jobs.DaddyJobsDataSet2TableAdapters.ManufacturerTableAdapter();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
+            this.name_of_workTableAdapter = new Daddy_Jobs.DaddyJobsDataSet2TableAdapters.Name_of_workTableAdapter();
+            this.daddyJobsDataSet21BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sparepartBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.spare_partTableAdapter = new Daddy_Jobs.Daddy_JobsDataSetTableAdapters.Spare_partTableAdapter();
+            this.sparepartBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.sparepartBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.spare_partTableAdapter1 = new Daddy_Jobs.DaddyJobsDataSet2TableAdapters.Spare_partTableAdapter();
+            this.workBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.workTableAdapter = new Daddy_Jobs.DaddyJobsDataSet2TableAdapters.WorkTableAdapter();
+            this.nameofworkBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.nameofworkBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.nameofworkBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.daddyJobsDataSet21BindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.nameofworkBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
+            this.daddyJobsDataSet21BindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.nameofworkBindingSource6 = new System.Windows.Forms.BindingSource(this.components);
+            this.name_of_workTableAdapter1 = new Daddy_Jobs.Original_DaddyJobsTableAdapters.Name_of_workTableAdapter();
+            this.label28 = new System.Windows.Forms.Label();
+            this.textBox11 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.manufacturerBindingSource)).BeginInit();
@@ -111,12 +138,29 @@
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.sparepartBindingSource3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nameofworkBindingSource7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.original_DaddyJobs)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.daddy_JobsDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nameofworkBindingSource5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nameofworkBindingSource)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.daddyJobsDataSet21BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sparepartBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sparepartBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sparepartBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.workBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nameofworkBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nameofworkBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nameofworkBindingSource3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.daddyJobsDataSet21BindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nameofworkBindingSource4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.daddyJobsDataSet21BindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nameofworkBindingSource6)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -440,6 +484,45 @@
             this.groupBox1.Visible = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label25.Location = new System.Drawing.Point(439, 23);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(303, 26);
+            this.label25.TabIndex = 35;
+            this.label25.Text = "Код принятого устройства: #";
+            this.label25.Visible = false;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(468, 142);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(139, 13);
+            this.label24.TabIndex = 34;
+            this.label24.Text = "Тестирование устройства";
+            // 
+            // checkedListBox1
+            // 
+            this.checkedListBox1.FormattingEnabled = true;
+            this.checkedListBox1.Items.AddRange(new object[] {
+            "Дисплейный модуль",
+            "Микрофон",
+            "Слуховой динамик",
+            "Музыкальный динамик",
+            "Основная камера",
+            "Фронтальная камера",
+            "Разъем зарядки",
+            "Разъем наушников",
+            "Аккумулятор",
+            "Кнопки"});
+            this.checkedListBox1.Location = new System.Drawing.Point(471, 159);
+            this.checkedListBox1.Name = "checkedListBox1";
+            this.checkedListBox1.Size = new System.Drawing.Size(145, 154);
+            this.checkedListBox1.TabIndex = 33;
+            // 
             // label23
             // 
             this.label23.AutoSize = true;
@@ -487,9 +570,15 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.textBox11);
+            this.groupBox2.Controls.Add(this.label28);
+            this.groupBox2.Controls.Add(this.comboBox4);
+            this.groupBox2.Controls.Add(this.textBox7);
+            this.groupBox2.Controls.Add(this.label26);
+            this.groupBox2.Controls.Add(this.label27);
+            this.groupBox2.Controls.Add(this.comboBox3);
             this.groupBox2.Controls.Add(this.textBox8);
             this.groupBox2.Controls.Add(this.label21);
-            this.groupBox2.Controls.Add(this.textBox7);
             this.groupBox2.Controls.Add(this.dataGridView1);
             this.groupBox2.Controls.Add(this.button3);
             this.groupBox2.Controls.Add(this.pictureBox3);
@@ -499,7 +588,6 @@
             this.groupBox2.Controls.Add(this.label18);
             this.groupBox2.Controls.Add(this.label19);
             this.groupBox2.Controls.Add(this.button4);
-            this.groupBox2.Controls.Add(this.textBox11);
             this.groupBox2.Controls.Add(this.textBox12);
             this.groupBox2.Location = new System.Drawing.Point(8, 44);
             this.groupBox2.Name = "groupBox2";
@@ -508,9 +596,69 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Visible = false;
             // 
+            // comboBox4
+            // 
+            this.comboBox4.DataSource = this.sparepartBindingSource3;
+            this.comboBox4.DisplayMember = "Namination";
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Location = new System.Drawing.Point(116, 162);
+            this.comboBox4.Name = "comboBox4";
+            this.comboBox4.Size = new System.Drawing.Size(100, 21);
+            this.comboBox4.TabIndex = 33;
+            // 
+            // sparepartBindingSource3
+            // 
+            this.sparepartBindingSource3.DataMember = "Spare_part";
+            this.sparepartBindingSource3.DataSource = this.daddyJobsDataSet21;
+            // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(116, 207);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(100, 20);
+            this.textBox7.TabIndex = 32;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(113, 191);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(62, 13);
+            this.label26.TabIndex = 31;
+            this.label26.Text = "Стоимость";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(113, 145);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(48, 13);
+            this.label27.TabIndex = 30;
+            this.label27.Text = "Запчать";
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.DataSource = this.nameofworkBindingSource7;
+            this.comboBox3.DisplayMember = "Name";
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(10, 162);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(100, 21);
+            this.comboBox3.TabIndex = 29;
+            // 
+            // nameofworkBindingSource7
+            // 
+            this.nameofworkBindingSource7.DataMember = "Name_of_work";
+            this.nameofworkBindingSource7.DataSource = this.original_DaddyJobs;
+            // 
+            // original_DaddyJobs
+            // 
+            this.original_DaddyJobs.DataSetName = "Original_DaddyJobs";
+            this.original_DaddyJobs.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // textBox8
             // 
-            this.textBox8.Location = new System.Drawing.Point(122, 206);
+            this.textBox8.Location = new System.Drawing.Point(10, 207);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(100, 20);
             this.textBox8.TabIndex = 28;
@@ -518,27 +666,20 @@
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(119, 185);
+            this.label21.Location = new System.Drawing.Point(7, 191);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(62, 13);
             this.label21.TabIndex = 27;
             this.label21.Text = "Стоимость";
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(13, 206);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 20);
-            this.textBox7.TabIndex = 26;
             // 
             // dataGridView1
             // 
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.DataSource = this.daddy_JobsDataSet1;
-            this.dataGridView1.Location = new System.Drawing.Point(344, 60);
+            this.dataGridView1.Location = new System.Drawing.Point(456, 60);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(432, 220);
+            this.dataGridView1.Size = new System.Drawing.Size(318, 220);
             this.dataGridView1.TabIndex = 25;
             // 
             // daddy_JobsDataSet1
@@ -548,7 +689,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(139, 250);
+            this.button3.Location = new System.Drawing.Point(122, 284);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(110, 30);
             this.button3.TabIndex = 15;
@@ -569,7 +710,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(10, 185);
+            this.label12.Location = new System.Drawing.Point(7, 145);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(106, 13);
             this.label12.TabIndex = 23;
@@ -578,20 +719,20 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(119, 142);
+            this.label16.Location = new System.Drawing.Point(153, 125);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(67, 13);
+            this.label16.Size = new System.Drawing.Size(73, 13);
             this.label16.TabIndex = 17;
-            this.label16.Text = "Устройство";
+            this.label16.Text = "Устройство: ";
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(10, 142);
+            this.label17.Location = new System.Drawing.Point(153, 95);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(86, 13);
+            this.label17.Size = new System.Drawing.Size(89, 13);
             this.label17.TabIndex = 16;
-            this.label17.Text = "Код устройства";
+            this.label17.Text = "Код устройства:";
             // 
             // label18
             // 
@@ -617,21 +758,14 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(13, 250);
+            this.button4.Location = new System.Drawing.Point(10, 284);
             this.button4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(110, 30);
             this.button4.TabIndex = 10;
             this.button4.Text = "Принять";
             this.button4.UseVisualStyleBackColor = true;
-            // 
-            // textBox11
-            // 
-            this.textBox11.Location = new System.Drawing.Point(122, 159);
-            this.textBox11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(100, 20);
-            this.textBox11.TabIndex = 8;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // textBox12
             // 
@@ -639,12 +773,23 @@
             "DaddyJobs."});
             this.textBox12.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.textBox12.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.textBox12.Location = new System.Drawing.Point(13, 159);
+            this.textBox12.Location = new System.Drawing.Point(242, 92);
             this.textBox12.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox12.Name = "textBox12";
             this.textBox12.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBox12.Size = new System.Drawing.Size(100, 20);
             this.textBox12.TabIndex = 7;
+            this.textBox12.TextChanged += new System.EventHandler(this.textBox12_TextChanged);
+            // 
+            // nameofworkBindingSource5
+            // 
+            this.nameofworkBindingSource5.DataMember = "Name_of_work";
+            this.nameofworkBindingSource5.DataSource = this.daddyJobsDataSet21;
+            // 
+            // nameofworkBindingSource
+            // 
+            this.nameofworkBindingSource.DataMember = "Name_of_work";
+            this.nameofworkBindingSource.DataSource = this.daddyJobsDataSet21;
             // 
             // label10
             // 
@@ -809,44 +954,101 @@
             // 
             this.manufacturerTableAdapter.ClearBeforeFill = true;
             // 
-            // checkedListBox1
+            // name_of_workTableAdapter
             // 
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Items.AddRange(new object[] {
-            "Дисплейный модуль",
-            "Микрофон",
-            "Разговорный динамик",
-            "Слуховой динамик",
-            "Основная камера",
-            "Фронтальная камера",
-            "Разъем зарядки",
-            "Разъем наушников",
-            "Аккумулятор",
-            "Кнопки"});
-            this.checkedListBox1.Location = new System.Drawing.Point(471, 159);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(145, 154);
-            this.checkedListBox1.TabIndex = 33;
+            this.name_of_workTableAdapter.ClearBeforeFill = true;
             // 
-            // label24
+            // daddyJobsDataSet21BindingSource
             // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(468, 142);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(139, 13);
-            this.label24.TabIndex = 34;
-            this.label24.Text = "Тестирование устройства";
+            this.daddyJobsDataSet21BindingSource.DataSource = this.daddyJobsDataSet21;
+            this.daddyJobsDataSet21BindingSource.Position = 0;
             // 
-            // label25
+            // sparepartBindingSource
             // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label25.Location = new System.Drawing.Point(439, 23);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(303, 26);
-            this.label25.TabIndex = 35;
-            this.label25.Text = "Код принятого устройства: #";
-            this.label25.Visible = false;
+            this.sparepartBindingSource.DataMember = "Spare_part";
+            this.sparepartBindingSource.DataSource = this.daddy_JobsDataSet1;
+            // 
+            // spare_partTableAdapter
+            // 
+            this.spare_partTableAdapter.ClearBeforeFill = true;
+            // 
+            // sparepartBindingSource1
+            // 
+            this.sparepartBindingSource1.DataMember = "Spare_part";
+            this.sparepartBindingSource1.DataSource = this.daddy_JobsDataSet1;
+            // 
+            // sparepartBindingSource2
+            // 
+            this.sparepartBindingSource2.DataMember = "Spare_part";
+            this.sparepartBindingSource2.DataSource = this.daddyJobsDataSet21;
+            // 
+            // spare_partTableAdapter1
+            // 
+            this.spare_partTableAdapter1.ClearBeforeFill = true;
+            // 
+            // workBindingSource
+            // 
+            this.workBindingSource.DataMember = "Work";
+            this.workBindingSource.DataSource = this.daddyJobsDataSet21;
+            // 
+            // workTableAdapter
+            // 
+            this.workTableAdapter.ClearBeforeFill = true;
+            // 
+            // nameofworkBindingSource1
+            // 
+            this.nameofworkBindingSource1.DataMember = "Name_of_work";
+            this.nameofworkBindingSource1.DataSource = this.daddyJobsDataSet21;
+            // 
+            // nameofworkBindingSource2
+            // 
+            this.nameofworkBindingSource2.DataMember = "Name_of_work";
+            this.nameofworkBindingSource2.DataSource = this.daddyJobsDataSet21;
+            // 
+            // nameofworkBindingSource3
+            // 
+            this.nameofworkBindingSource3.DataMember = "Name_of_work";
+            this.nameofworkBindingSource3.DataSource = this.daddyJobsDataSet21BindingSource;
+            // 
+            // daddyJobsDataSet21BindingSource1
+            // 
+            this.daddyJobsDataSet21BindingSource1.DataSource = this.daddyJobsDataSet21;
+            this.daddyJobsDataSet21BindingSource1.Position = 0;
+            // 
+            // nameofworkBindingSource4
+            // 
+            this.nameofworkBindingSource4.DataMember = "Name_of_work";
+            this.nameofworkBindingSource4.DataSource = this.daddyJobsDataSet21BindingSource1;
+            // 
+            // daddyJobsDataSet21BindingSource2
+            // 
+            this.daddyJobsDataSet21BindingSource2.DataSource = this.daddyJobsDataSet21;
+            this.daddyJobsDataSet21BindingSource2.Position = 0;
+            // 
+            // nameofworkBindingSource6
+            // 
+            this.nameofworkBindingSource6.DataMember = "Name_of_work";
+            this.nameofworkBindingSource6.DataSource = this.daddyJobsDataSet21;
+            // 
+            // name_of_workTableAdapter1
+            // 
+            this.name_of_workTableAdapter1.ClearBeforeFill = true;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(7, 233);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(80, 13);
+            this.label28.TabIndex = 34;
+            this.label28.Text = "Комментарий:";
+            // 
+            // textBox11
+            // 
+            this.textBox11.Location = new System.Drawing.Point(10, 250);
+            this.textBox11.Name = "textBox11";
+            this.textBox11.Size = new System.Drawing.Size(206, 20);
+            this.textBox11.TabIndex = 35;
             // 
             // Form2
             // 
@@ -857,9 +1059,9 @@
             this.Controls.Add(this.label10);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form2";
@@ -875,13 +1077,30 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.sparepartBindingSource3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nameofworkBindingSource7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.original_DaddyJobs)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.daddy_JobsDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nameofworkBindingSource5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nameofworkBindingSource)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.daddyJobsDataSet21BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sparepartBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sparepartBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sparepartBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.workBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nameofworkBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nameofworkBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nameofworkBindingSource3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.daddyJobsDataSet21BindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nameofworkBindingSource4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.daddyJobsDataSet21BindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nameofworkBindingSource6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -931,7 +1150,6 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.TextBox textBox11;
         private System.Windows.Forms.TextBox textBox12;
         private System.Windows.Forms.DataGridView dataGridView1;
         private DaddyJobsDataSet2 daddyJobsDataSet21;
@@ -953,7 +1171,6 @@
         private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.BindingSource manufacturerBindingSource;
         private DaddyJobsDataSet2TableAdapters.ManufacturerTableAdapter manufacturerTableAdapter;
         private System.Windows.Forms.TextBox textBox13;
@@ -963,5 +1180,34 @@
         private System.Windows.Forms.CheckedListBox checkedListBox1;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.BindingSource nameofworkBindingSource;
+        private DaddyJobsDataSet2TableAdapters.Name_of_workTableAdapter name_of_workTableAdapter;
+        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.BindingSource daddyJobsDataSet21BindingSource;
+        private System.Windows.Forms.BindingSource sparepartBindingSource;
+        private Daddy_JobsDataSetTableAdapters.Spare_partTableAdapter spare_partTableAdapter;
+        private System.Windows.Forms.BindingSource sparepartBindingSource1;
+        private System.Windows.Forms.BindingSource sparepartBindingSource2;
+        private DaddyJobsDataSet2TableAdapters.Spare_partTableAdapter spare_partTableAdapter1;
+        private System.Windows.Forms.BindingSource workBindingSource;
+        private DaddyJobsDataSet2TableAdapters.WorkTableAdapter workTableAdapter;
+        private System.Windows.Forms.BindingSource nameofworkBindingSource1;
+        private System.Windows.Forms.BindingSource sparepartBindingSource3;
+        private System.Windows.Forms.BindingSource nameofworkBindingSource2;
+        private System.Windows.Forms.BindingSource nameofworkBindingSource3;
+        private System.Windows.Forms.BindingSource nameofworkBindingSource5;
+        private System.Windows.Forms.BindingSource daddyJobsDataSet21BindingSource1;
+        private System.Windows.Forms.BindingSource nameofworkBindingSource4;
+        private System.Windows.Forms.BindingSource nameofworkBindingSource6;
+        private System.Windows.Forms.BindingSource daddyJobsDataSet21BindingSource2;
+        private Original_DaddyJobs original_DaddyJobs;
+        private System.Windows.Forms.BindingSource nameofworkBindingSource7;
+        private Original_DaddyJobsTableAdapters.Name_of_workTableAdapter name_of_workTableAdapter1;
+        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.Label label28;
     }
 }
