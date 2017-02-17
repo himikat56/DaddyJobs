@@ -56,16 +56,24 @@ namespace Daddy_Jobs
             }
         }
 
+        protected void Form2_Closed(object sender, EventArgs e) { Application.Exit(); } //Остановка приложения
+
         private void Form2_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "original_DaddyJobs1.Work_form". При необходимости она может быть перемещена или удалена.
-            this.work_formTableAdapter.Fill(this.original_DaddyJobs1.Work_form);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "original_DaddyJobs.Name_of_work". При необходимости она может быть перемещена или удалена.
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "original_DaddyJobs.DataPaymentForm". При необходимости она может быть перемещена или удалена.
+            this.dataPaymentFormTableAdapter.Fill(this.original_DaddyJobs.DataPaymentForm);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "original_DaddyJobs2.DataWork". При необходимости она может быть перемещена или удалена.
+            this.dataWorkTableAdapter.Fill(this.original_DaddyJobs2.DataWork);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "original_DaddyJobs2.DataWork2". При необходимости она может быть перемещена или удалена.
+            this.dataWork2TableAdapter.Fill(this.original_DaddyJobs2.DataWork2);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "original_DaddyJobs.Work". При необходимости она может быть перемещена или удалена.
+            this.workTableAdapter1.Fill(this.original_DaddyJobs.Work);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "original_DaddyJobs.DataWork". При необходимости она может быть перемещена или удалена.
+            this.dataWorkTableAdapter.Fill(this.original_DaddyJobs.DataWork);
+            this.spare_partTableAdapter2.Fill(this.original_DaddyJobs1.Spare_part);
             this.name_of_workTableAdapter1.Fill(this.original_DaddyJobs.Name_of_work);
             this.spare_partTableAdapter1.Fill(this.daddyJobsDataSet21.Spare_part);
             this.manufacturerTableAdapter.Fill(this.daddyJobsDataSet21.Manufacturer);
-            //this.name_of_workTableAdapter.Fill(this.daddyJobsDataSet21.Name);
-
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -89,7 +97,7 @@ namespace Daddy_Jobs
             if (textBox1.Text != "" && textBox2.Text != "" && textBox5.Text != "" && textBox3.Text != "" && textBox6.Text != "")
             {
                 int IdClient = AddClient(textBox1.Text, textBox2.Text, dateTimePicker1.Text, textBox13.Text);
-                int IdDevice = AddDevice(comboBox1.SelectedIndex + 1, textBox3.Text, textBox5.Text, textBox4.Text, textBox6.Text, Convert.ToBoolean(checkBox1.CheckState), IdClient);
+                int IdDevice = AddDevice(comboBox1.SelectedIndex + 1, textBox3.Text, textBox5.Text, textBox4.Text, textBox6.Text, Convert.ToBoolean(checkBox1.CheckState), IdClient,1);
                 DateTime thisDay = DateTime.Today;
                 AddWork(13, 0, 1, IdDevice, 5, 0, thisDay.ToString("d"), "");//Прием устройства
                 label25.Text = "Код принятого устройства: " + IdDevice;
@@ -160,12 +168,24 @@ namespace Daddy_Jobs
             cmd.ExecuteNonQuery();
             conn.Close();
         }
-        public int AddDevice(int manufacturer, string model, string malfunction, string imei, string condition, bool urgent_repairs, int client_code)
+        public void AddPayment(int device_code, int payment, string comment, string date_time)
+        {
+            SqlConnection conn = new SqlConnection(GlobalConnection);
+            conn.Open();
+            var cmd = new SqlCommand("INSERT INTO [Payment] ([Device_code],[Payment],[Comment],[Date_time]) VALUES (@device_code,@payment,@comment,@date_time)", conn);
+            cmd.Parameters.AddWithValue("@device_code", device_code);
+            cmd.Parameters.AddWithValue("@payment", payment);
+            cmd.Parameters.AddWithValue("@comment", comment);
+            cmd.Parameters.AddWithValue("@date_time", date_time);
+            cmd.ExecuteNonQuery();
+            conn.Close();
+        }
+        public int AddDevice(int manufacturer, string model, string malfunction, string imei, string condition, bool urgent_repairs, int client_code, int status_code)
         {
             int id = 0;
             SqlConnection conn = new SqlConnection(GlobalConnection);
             conn.Open();
-            var cmd = new SqlCommand("INSERT INTO [Device] ( [Manufacturer_code],[Model],[Malfunction],[IMEI],[Condition],[Urgent_repairs],[Client_code]) VALUES (@manufacturer,@model,@malfunction,@imei,@condition,@urgent_repairs,@client_code)", conn);
+            var cmd = new SqlCommand("INSERT INTO [Device] ( [Manufacturer_code],[Model],[Malfunction],[IMEI],[Condition],[Urgent_repairs],[Client_code],[Status_code]) VALUES (@manufacturer,@model,@malfunction,@imei,@condition,@urgent_repairs,@client_code,@status_code)", conn);
             cmd.Parameters.AddWithValue("@manufacturer", manufacturer);
             cmd.Parameters.AddWithValue("@model", model);
             cmd.Parameters.AddWithValue("@malfunction", malfunction);
@@ -173,6 +193,7 @@ namespace Daddy_Jobs
             cmd.Parameters.AddWithValue("@condition", condition);
             cmd.Parameters.AddWithValue("@urgent_repairs", urgent_repairs);
             cmd.Parameters.AddWithValue("@client_code", client_code);
+            cmd.Parameters.AddWithValue("@status_code", status_code);
             cmd.ExecuteNonQuery();
             cmd.CommandText = "SELECT ident_current('Device') as Device_code";
             SqlDataReader reader = cmd.ExecuteReader();
@@ -185,7 +206,7 @@ namespace Daddy_Jobs
         }
         public void setLogin(String login)
         {
-            this.label10.Text = login;
+            this.label10.Text = "Пользователь:  " + login;
         }
 
         private void выходToolStripMenuItem_Click(object sender, EventArgs e)
@@ -328,7 +349,21 @@ namespace Daddy_Jobs
                 }//   
             }
         }
-
+        private void ClearPayment ()
+        {
+            label13.Text = "Устройство: ";
+            label11.Text = "К оплате: ";
+            using (SqlConnection conn = new SqlConnection(GlobalConnection))
+            {
+                conn.Open();
+                SqlDataAdapter da = new SqlDataAdapter("SELECT Work_code,Name_of_work.Name,Work_cost,Spare_part.Namination,Spare_part_cost,Comment FROM Work,Name_of_work,Spare_part WHERE Work.Spare_part_code = Spare_part.Spare_part_code and Work.Code_name_of_work = Name_of_work.Code_name_of_work", conn);
+                SqlCommandBuilder cb = new SqlCommandBuilder(da);
+                DataSet ds = new DataSet();
+                da.Fill(ds, "Work,Name_of_work,Spare_part");
+                dataGridView2.DataSource = ds.Tables["Work,Name_of_work,Spare_part"];
+                conn.Close();
+            }
+        }
         private void textBox10_TextChanged(object sender, EventArgs e)
         {
             if (textBox10.Text != "")
@@ -351,6 +386,11 @@ namespace Daddy_Jobs
                         }
                         if (sourceDevice == true)
                         {
+                            SqlDataAdapter da = new SqlDataAdapter("SELECT Work_code,Name_of_work.Name,Work_cost,Spare_part.Namination,Spare_part_cost,Comment FROM Work,Name_of_work,Spare_part WHERE Work.Spare_part_code = Spare_part.Spare_part_code and Work.Code_name_of_work = Name_of_work.Code_name_of_work and  Device_code = " + textBox10.Text, conn);
+                            SqlCommandBuilder cb = new SqlCommandBuilder(da);
+                            DataSet ds = new DataSet();
+                            da.Fill(ds, "Work,Name_of_work,Spare_part");
+                            dataGridView2.DataSource = ds.Tables["Work,Name_of_work,Spare_part"];
                             com.CommandText = string.Format("SELECT Model FROM Device WHERE Device_code = " + textBox10.Text);
                             using (SqlDataReader r = com.ExecuteReader())
                             {
@@ -359,11 +399,56 @@ namespace Daddy_Jobs
                                     label13.Text = "Устройство: " + (string)r[0];// Результаты запроса 
                                 }
                             }
+                            com.CommandText = string.Format("SELECT SUM(Spare_part_cost),SUM(Work_cost) FROM Work WHERE Device_code = " + textBox10.Text);
+                            using (SqlDataReader r = com.ExecuteReader())
+                            {
+                                while (r.Read())
+                                {
+                                    int work = 0;
+                                    int spare = 0;
+                                    if (r[0] == DBNull.Value) { work = 0; } else { work = (int)r[0]; }
+                                    if (r[1] == DBNull.Value) { spare = 0; } else { spare = (int)r[1]; }
+                                    label11.Text = "К оплате: " + Convert.ToString(work + spare);// Результаты запроса 
+                                }
+                            }
                         }
-                        else label13.Text = "Устройство: ";
+                        else ClearPayment();
                     }
                     conn.Close();
                 }//
+            }
+            else ClearPayment();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            if (textBox10.Text != "" && textBox9.Text != "" && textBox14.Text != "")
+            {
+                using (SqlConnection conn = new SqlConnection(GlobalConnection))
+                {
+                    conn.Open();
+
+                    using (SqlCommand com = conn.CreateCommand())
+                    {
+                        bool sourceDevice = false;
+                        com.CommandText = string.Format("SELECT Device_code FROM Device");
+                        using (SqlDataReader r = com.ExecuteReader())
+                        {
+                            while (r.Read())
+                            {
+                                if (r[0].ToString() == textBox10.Text)
+                                {
+                                    sourceDevice = true;
+                                }
+                            }
+                        }
+                        if (sourceDevice == true)
+                        {
+                            DateTime now = DateTime.Now;
+                            AddPayment(Convert.ToInt32(textBox10.Text), Convert.ToInt32(textBox9.Text), textBox14.Text, now.ToString("d"));
+                        }
+                    }
+                }
             }
         }
     }

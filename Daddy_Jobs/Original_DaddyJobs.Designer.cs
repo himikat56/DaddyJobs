@@ -44,7 +44,11 @@ namespace Daddy_Jobs {
         
         private WorkDataTable tableWork;
         
-        private Work_formDataTable tableWork_form;
+        private DataWorkDataTable tableDataWork;
+        
+        private DataWork2DataTable tableDataWork2;
+        
+        private DataPaymentFormDataTable tableDataPaymentForm;
         
         private global::System.Data.DataRelation relationFK_Device_Device;
         
@@ -120,8 +124,14 @@ namespace Daddy_Jobs {
                 if ((ds.Tables["Work"] != null)) {
                     base.Tables.Add(new WorkDataTable(ds.Tables["Work"]));
                 }
-                if ((ds.Tables["Work_form"] != null)) {
-                    base.Tables.Add(new Work_formDataTable(ds.Tables["Work_form"]));
+                if ((ds.Tables["DataWork"] != null)) {
+                    base.Tables.Add(new DataWorkDataTable(ds.Tables["DataWork"]));
+                }
+                if ((ds.Tables["DataWork2"] != null)) {
+                    base.Tables.Add(new DataWork2DataTable(ds.Tables["DataWork2"]));
+                }
+                if ((ds.Tables["DataPaymentForm"] != null)) {
+                    base.Tables.Add(new DataPaymentFormDataTable(ds.Tables["DataPaymentForm"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -245,9 +255,29 @@ namespace Daddy_Jobs {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public Work_formDataTable Work_form {
+        public DataWorkDataTable DataWork {
             get {
-                return this.tableWork_form;
+                return this.tableDataWork;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public DataWork2DataTable DataWork2 {
+            get {
+                return this.tableDataWork2;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public DataPaymentFormDataTable DataPaymentForm {
+            get {
+                return this.tableDataPaymentForm;
             }
         }
         
@@ -348,8 +378,14 @@ namespace Daddy_Jobs {
                 if ((ds.Tables["Work"] != null)) {
                     base.Tables.Add(new WorkDataTable(ds.Tables["Work"]));
                 }
-                if ((ds.Tables["Work_form"] != null)) {
-                    base.Tables.Add(new Work_formDataTable(ds.Tables["Work_form"]));
+                if ((ds.Tables["DataWork"] != null)) {
+                    base.Tables.Add(new DataWorkDataTable(ds.Tables["DataWork"]));
+                }
+                if ((ds.Tables["DataWork2"] != null)) {
+                    base.Tables.Add(new DataWork2DataTable(ds.Tables["DataWork2"]));
+                }
+                if ((ds.Tables["DataPaymentForm"] != null)) {
+                    base.Tables.Add(new DataPaymentFormDataTable(ds.Tables["DataPaymentForm"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -444,10 +480,22 @@ namespace Daddy_Jobs {
                     this.tableWork.InitVars();
                 }
             }
-            this.tableWork_form = ((Work_formDataTable)(base.Tables["Work_form"]));
+            this.tableDataWork = ((DataWorkDataTable)(base.Tables["DataWork"]));
             if ((initTable == true)) {
-                if ((this.tableWork_form != null)) {
-                    this.tableWork_form.InitVars();
+                if ((this.tableDataWork != null)) {
+                    this.tableDataWork.InitVars();
+                }
+            }
+            this.tableDataWork2 = ((DataWork2DataTable)(base.Tables["DataWork2"]));
+            if ((initTable == true)) {
+                if ((this.tableDataWork2 != null)) {
+                    this.tableDataWork2.InitVars();
+                }
+            }
+            this.tableDataPaymentForm = ((DataPaymentFormDataTable)(base.Tables["DataPaymentForm"]));
+            if ((initTable == true)) {
+                if ((this.tableDataPaymentForm != null)) {
+                    this.tableDataPaymentForm.InitVars();
                 }
             }
             this.relationFK_Device_Device = this.Relations["FK_Device_Device"];
@@ -488,8 +536,12 @@ namespace Daddy_Jobs {
             base.Tables.Add(this.tableUsers);
             this.tableWork = new WorkDataTable();
             base.Tables.Add(this.tableWork);
-            this.tableWork_form = new Work_formDataTable();
-            base.Tables.Add(this.tableWork_form);
+            this.tableDataWork = new DataWorkDataTable();
+            base.Tables.Add(this.tableDataWork);
+            this.tableDataWork2 = new DataWork2DataTable();
+            base.Tables.Add(this.tableDataWork2);
+            this.tableDataPaymentForm = new DataPaymentFormDataTable();
+            base.Tables.Add(this.tableDataPaymentForm);
             this.relationFK_Device_Device = new global::System.Data.DataRelation("FK_Device_Device", new global::System.Data.DataColumn[] {
                         this.tableClient.Client_codeColumn}, new global::System.Data.DataColumn[] {
                         this.tableDevice.Client_codeColumn}, false);
@@ -586,7 +638,19 @@ namespace Daddy_Jobs {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializeWork_form() {
+        private bool ShouldSerializeDataWork() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private bool ShouldSerializeDataWork2() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private bool ShouldSerializeDataPaymentForm() {
             return false;
         }
         
@@ -676,7 +740,13 @@ namespace Daddy_Jobs {
         public delegate void WorkRowChangeEventHandler(object sender, WorkRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void Work_formRowChangeEventHandler(object sender, Work_formRowChangeEvent e);
+        public delegate void DataWorkRowChangeEventHandler(object sender, DataWorkRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void DataWork2RowChangeEventHandler(object sender, DataWork2RowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void DataPaymentFormRowChangeEventHandler(object sender, DataPaymentFormRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -3983,7 +4053,7 @@ namespace Daddy_Jobs {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class Work_formDataTable : global::System.Data.TypedTableBase<Work_formRow> {
+        public partial class DataWorkDataTable : global::System.Data.TypedTableBase<DataWorkRow> {
             
             private global::System.Data.DataColumn columnКод;
             
@@ -3993,16 +4063,16 @@ namespace Daddy_Jobs {
             
             private global::System.Data.DataColumn columnРабота;
             
-            private global::System.Data.DataColumn columnЦена;
+            private global::System.Data.DataColumn columnЦена_раб_;
             
             private global::System.Data.DataColumn columnЗапчасть;
             
-            private global::System.Data.DataColumn columnЦена1;
+            private global::System.Data.DataColumn columnЦена_зап_;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Work_formDataTable() {
-                this.TableName = "Work_form";
+            public DataWorkDataTable() {
+                this.TableName = "DataWork";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -4010,7 +4080,7 @@ namespace Daddy_Jobs {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal Work_formDataTable(global::System.Data.DataTable table) {
+            internal DataWorkDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -4027,7 +4097,7 @@ namespace Daddy_Jobs {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected Work_formDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected DataWorkDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -4066,9 +4136,9 @@ namespace Daddy_Jobs {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn ЦенаColumn {
+            public global::System.Data.DataColumn Цена_раб_Column {
                 get {
-                    return this.columnЦена;
+                    return this.columnЦена_раб_;
                 }
             }
             
@@ -4082,9 +4152,9 @@ namespace Daddy_Jobs {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn Цена1Column {
+            public global::System.Data.DataColumn Цена_зап_Column {
                 get {
-                    return this.columnЦена1;
+                    return this.columnЦена_зап_;
                 }
             }
             
@@ -4099,58 +4169,58 @@ namespace Daddy_Jobs {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Work_formRow this[int index] {
+            public DataWorkRow this[int index] {
                 get {
-                    return ((Work_formRow)(this.Rows[index]));
+                    return ((DataWorkRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event Work_formRowChangeEventHandler Work_formRowChanging;
+            public event DataWorkRowChangeEventHandler DataWorkRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event Work_formRowChangeEventHandler Work_formRowChanged;
+            public event DataWorkRowChangeEventHandler DataWorkRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event Work_formRowChangeEventHandler Work_formRowDeleting;
+            public event DataWorkRowChangeEventHandler DataWorkRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event Work_formRowChangeEventHandler Work_formRowDeleted;
+            public event DataWorkRowChangeEventHandler DataWorkRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddWork_formRow(Work_formRow row) {
+            public void AddDataWorkRow(DataWorkRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Work_formRow AddWork_formRow(string Модель, System.DateTime Дата, string Работа, int Цена, string Запчасть, int Цена1) {
-                Work_formRow rowWork_formRow = ((Work_formRow)(this.NewRow()));
+            public DataWorkRow AddDataWorkRow(string Модель, System.DateTime Дата, string Работа, int Цена_раб_, string Запчасть, int Цена_зап_) {
+                DataWorkRow rowDataWorkRow = ((DataWorkRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         Модель,
                         Дата,
                         Работа,
-                        Цена,
+                        Цена_раб_,
                         Запчасть,
-                        Цена1};
-                rowWork_formRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowWork_formRow);
-                return rowWork_formRow;
+                        Цена_зап_};
+                rowDataWorkRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowDataWorkRow);
+                return rowDataWorkRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Work_formRow FindByКод(int Код) {
-                return ((Work_formRow)(this.Rows.Find(new object[] {
+            public DataWorkRow FindByКод(int Код) {
+                return ((DataWorkRow)(this.Rows.Find(new object[] {
                             Код})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                Work_formDataTable cln = ((Work_formDataTable)(base.Clone()));
+                DataWorkDataTable cln = ((DataWorkDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -4158,7 +4228,7 @@ namespace Daddy_Jobs {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new Work_formDataTable();
+                return new DataWorkDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4168,9 +4238,9 @@ namespace Daddy_Jobs {
                 this.columnМодель = base.Columns["Модель"];
                 this.columnДата = base.Columns["Дата"];
                 this.columnРабота = base.Columns["Работа"];
-                this.columnЦена = base.Columns["Цена"];
+                this.columnЦена_раб_ = base.Columns["Цена раб_"];
                 this.columnЗапчасть = base.Columns["Запчасть"];
-                this.columnЦена1 = base.Columns["Цена1"];
+                this.columnЦена_зап_ = base.Columns["Цена зап_"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4184,12 +4254,12 @@ namespace Daddy_Jobs {
                 base.Columns.Add(this.columnДата);
                 this.columnРабота = new global::System.Data.DataColumn("Работа", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnРабота);
-                this.columnЦена = new global::System.Data.DataColumn("Цена", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnЦена);
+                this.columnЦена_раб_ = new global::System.Data.DataColumn("Цена раб_", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnЦена_раб_);
                 this.columnЗапчасть = new global::System.Data.DataColumn("Запчасть", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnЗапчасть);
-                this.columnЦена1 = new global::System.Data.DataColumn("Цена1", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnЦена1);
+                this.columnЦена_зап_ = new global::System.Data.DataColumn("Цена зап_", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnЦена_зап_);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnКод}, true));
                 this.columnКод.AutoIncrement = true;
@@ -4200,33 +4270,35 @@ namespace Daddy_Jobs {
                 this.columnКод.Unique = true;
                 this.columnМодель.MaxLength = 128;
                 this.columnРабота.MaxLength = 128;
+                this.columnЦена_раб_.Caption = "Цена раб.";
                 this.columnЗапчасть.MaxLength = 128;
+                this.columnЦена_зап_.Caption = "Цена зап.";
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Work_formRow NewWork_formRow() {
-                return ((Work_formRow)(this.NewRow()));
+            public DataWorkRow NewDataWorkRow() {
+                return ((DataWorkRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new Work_formRow(builder);
+                return new DataWorkRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(Work_formRow);
+                return typeof(DataWorkRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.Work_formRowChanged != null)) {
-                    this.Work_formRowChanged(this, new Work_formRowChangeEvent(((Work_formRow)(e.Row)), e.Action));
+                if ((this.DataWorkRowChanged != null)) {
+                    this.DataWorkRowChanged(this, new DataWorkRowChangeEvent(((DataWorkRow)(e.Row)), e.Action));
                 }
             }
             
@@ -4234,8 +4306,8 @@ namespace Daddy_Jobs {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.Work_formRowChanging != null)) {
-                    this.Work_formRowChanging(this, new Work_formRowChangeEvent(((Work_formRow)(e.Row)), e.Action));
+                if ((this.DataWorkRowChanging != null)) {
+                    this.DataWorkRowChanging(this, new DataWorkRowChangeEvent(((DataWorkRow)(e.Row)), e.Action));
                 }
             }
             
@@ -4243,8 +4315,8 @@ namespace Daddy_Jobs {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.Work_formRowDeleted != null)) {
-                    this.Work_formRowDeleted(this, new Work_formRowChangeEvent(((Work_formRow)(e.Row)), e.Action));
+                if ((this.DataWorkRowDeleted != null)) {
+                    this.DataWorkRowDeleted(this, new DataWorkRowChangeEvent(((DataWorkRow)(e.Row)), e.Action));
                 }
             }
             
@@ -4252,14 +4324,14 @@ namespace Daddy_Jobs {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.Work_formRowDeleting != null)) {
-                    this.Work_formRowDeleting(this, new Work_formRowChangeEvent(((Work_formRow)(e.Row)), e.Action));
+                if ((this.DataWorkRowDeleting != null)) {
+                    this.DataWorkRowDeleting(this, new DataWorkRowChangeEvent(((DataWorkRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemoveWork_formRow(Work_formRow row) {
+            public void RemoveDataWorkRow(DataWorkRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -4286,7 +4358,681 @@ namespace Daddy_Jobs {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "Work_formDataTable";
+                attribute2.FixedValue = "DataWorkDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class DataWork2DataTable : global::System.Data.TypedTableBase<DataWork2Row> {
+            
+            private global::System.Data.DataColumn columnWork_code;
+            
+            private global::System.Data.DataColumn columnNamination;
+            
+            private global::System.Data.DataColumn columnSpare_part_cost;
+            
+            private global::System.Data.DataColumn columnName;
+            
+            private global::System.Data.DataColumn columnWork_cost;
+            
+            private global::System.Data.DataColumn columnComment;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public DataWork2DataTable() {
+                this.TableName = "DataWork2";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal DataWork2DataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected DataWork2DataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Work_codeColumn {
+                get {
+                    return this.columnWork_code;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn NaminationColumn {
+                get {
+                    return this.columnNamination;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Spare_part_costColumn {
+                get {
+                    return this.columnSpare_part_cost;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn NameColumn {
+                get {
+                    return this.columnName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Work_costColumn {
+                get {
+                    return this.columnWork_cost;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn CommentColumn {
+                get {
+                    return this.columnComment;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public DataWork2Row this[int index] {
+                get {
+                    return ((DataWork2Row)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event DataWork2RowChangeEventHandler DataWork2RowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event DataWork2RowChangeEventHandler DataWork2RowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event DataWork2RowChangeEventHandler DataWork2RowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event DataWork2RowChangeEventHandler DataWork2RowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void AddDataWork2Row(DataWork2Row row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public DataWork2Row AddDataWork2Row(string Namination, int Spare_part_cost, string Name, int Work_cost, string Comment) {
+                DataWork2Row rowDataWork2Row = ((DataWork2Row)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        null,
+                        Namination,
+                        Spare_part_cost,
+                        Name,
+                        Work_cost,
+                        Comment};
+                rowDataWork2Row.ItemArray = columnValuesArray;
+                this.Rows.Add(rowDataWork2Row);
+                return rowDataWork2Row;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public DataWork2Row FindByWork_code(int Work_code) {
+                return ((DataWork2Row)(this.Rows.Find(new object[] {
+                            Work_code})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                DataWork2DataTable cln = ((DataWork2DataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new DataWork2DataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnWork_code = base.Columns["Work_code"];
+                this.columnNamination = base.Columns["Namination"];
+                this.columnSpare_part_cost = base.Columns["Spare_part_cost"];
+                this.columnName = base.Columns["Name"];
+                this.columnWork_cost = base.Columns["Work_cost"];
+                this.columnComment = base.Columns["Comment"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnWork_code = new global::System.Data.DataColumn("Work_code", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnWork_code);
+                this.columnNamination = new global::System.Data.DataColumn("Namination", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNamination);
+                this.columnSpare_part_cost = new global::System.Data.DataColumn("Spare_part_cost", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSpare_part_cost);
+                this.columnName = new global::System.Data.DataColumn("Name", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnName);
+                this.columnWork_cost = new global::System.Data.DataColumn("Work_cost", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnWork_cost);
+                this.columnComment = new global::System.Data.DataColumn("Comment", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnComment);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnWork_code}, true));
+                this.columnWork_code.AutoIncrement = true;
+                this.columnWork_code.AutoIncrementSeed = -1;
+                this.columnWork_code.AutoIncrementStep = -1;
+                this.columnWork_code.AllowDBNull = false;
+                this.columnWork_code.ReadOnly = true;
+                this.columnWork_code.Unique = true;
+                this.columnNamination.MaxLength = 128;
+                this.columnSpare_part_cost.AllowDBNull = false;
+                this.columnName.MaxLength = 128;
+                this.columnWork_cost.AllowDBNull = false;
+                this.columnComment.MaxLength = 128;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public DataWork2Row NewDataWork2Row() {
+                return ((DataWork2Row)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new DataWork2Row(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(DataWork2Row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.DataWork2RowChanged != null)) {
+                    this.DataWork2RowChanged(this, new DataWork2RowChangeEvent(((DataWork2Row)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.DataWork2RowChanging != null)) {
+                    this.DataWork2RowChanging(this, new DataWork2RowChangeEvent(((DataWork2Row)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.DataWork2RowDeleted != null)) {
+                    this.DataWork2RowDeleted(this, new DataWork2RowChangeEvent(((DataWork2Row)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.DataWork2RowDeleting != null)) {
+                    this.DataWork2RowDeleting(this, new DataWork2RowChangeEvent(((DataWork2Row)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void RemoveDataWork2Row(DataWork2Row row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                Original_DaddyJobs ds = new Original_DaddyJobs();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "DataWork2DataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class DataPaymentFormDataTable : global::System.Data.TypedTableBase<DataPaymentFormRow> {
+            
+            private global::System.Data.DataColumn columnWork_code;
+            
+            private global::System.Data.DataColumn columnNamination;
+            
+            private global::System.Data.DataColumn columnSpare_part_cost;
+            
+            private global::System.Data.DataColumn columnName;
+            
+            private global::System.Data.DataColumn columnWork_cost;
+            
+            private global::System.Data.DataColumn columnComment;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public DataPaymentFormDataTable() {
+                this.TableName = "DataPaymentForm";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal DataPaymentFormDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected DataPaymentFormDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Work_codeColumn {
+                get {
+                    return this.columnWork_code;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn NaminationColumn {
+                get {
+                    return this.columnNamination;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Spare_part_costColumn {
+                get {
+                    return this.columnSpare_part_cost;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn NameColumn {
+                get {
+                    return this.columnName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Work_costColumn {
+                get {
+                    return this.columnWork_cost;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn CommentColumn {
+                get {
+                    return this.columnComment;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public DataPaymentFormRow this[int index] {
+                get {
+                    return ((DataPaymentFormRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event DataPaymentFormRowChangeEventHandler DataPaymentFormRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event DataPaymentFormRowChangeEventHandler DataPaymentFormRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event DataPaymentFormRowChangeEventHandler DataPaymentFormRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event DataPaymentFormRowChangeEventHandler DataPaymentFormRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void AddDataPaymentFormRow(DataPaymentFormRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public DataPaymentFormRow AddDataPaymentFormRow(string Namination, int Spare_part_cost, string Name, int Work_cost, string Comment) {
+                DataPaymentFormRow rowDataPaymentFormRow = ((DataPaymentFormRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        null,
+                        Namination,
+                        Spare_part_cost,
+                        Name,
+                        Work_cost,
+                        Comment};
+                rowDataPaymentFormRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowDataPaymentFormRow);
+                return rowDataPaymentFormRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public DataPaymentFormRow FindByWork_code(int Work_code) {
+                return ((DataPaymentFormRow)(this.Rows.Find(new object[] {
+                            Work_code})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                DataPaymentFormDataTable cln = ((DataPaymentFormDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new DataPaymentFormDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnWork_code = base.Columns["Work_code"];
+                this.columnNamination = base.Columns["Namination"];
+                this.columnSpare_part_cost = base.Columns["Spare_part_cost"];
+                this.columnName = base.Columns["Name"];
+                this.columnWork_cost = base.Columns["Work_cost"];
+                this.columnComment = base.Columns["Comment"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnWork_code = new global::System.Data.DataColumn("Work_code", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnWork_code);
+                this.columnNamination = new global::System.Data.DataColumn("Namination", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNamination);
+                this.columnSpare_part_cost = new global::System.Data.DataColumn("Spare_part_cost", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSpare_part_cost);
+                this.columnName = new global::System.Data.DataColumn("Name", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnName);
+                this.columnWork_cost = new global::System.Data.DataColumn("Work_cost", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnWork_cost);
+                this.columnComment = new global::System.Data.DataColumn("Comment", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnComment);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnWork_code}, true));
+                this.columnWork_code.AutoIncrement = true;
+                this.columnWork_code.AutoIncrementSeed = -1;
+                this.columnWork_code.AutoIncrementStep = -1;
+                this.columnWork_code.AllowDBNull = false;
+                this.columnWork_code.ReadOnly = true;
+                this.columnWork_code.Unique = true;
+                this.columnNamination.MaxLength = 128;
+                this.columnSpare_part_cost.AllowDBNull = false;
+                this.columnName.MaxLength = 128;
+                this.columnWork_cost.AllowDBNull = false;
+                this.columnComment.MaxLength = 128;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public DataPaymentFormRow NewDataPaymentFormRow() {
+                return ((DataPaymentFormRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new DataPaymentFormRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(DataPaymentFormRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.DataPaymentFormRowChanged != null)) {
+                    this.DataPaymentFormRowChanged(this, new DataPaymentFormRowChangeEvent(((DataPaymentFormRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.DataPaymentFormRowChanging != null)) {
+                    this.DataPaymentFormRowChanging(this, new DataPaymentFormRowChangeEvent(((DataPaymentFormRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.DataPaymentFormRowDeleted != null)) {
+                    this.DataPaymentFormRowDeleted(this, new DataPaymentFormRowChangeEvent(((DataPaymentFormRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.DataPaymentFormRowDeleting != null)) {
+                    this.DataPaymentFormRowDeleting(this, new DataPaymentFormRowChangeEvent(((DataPaymentFormRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void RemoveDataPaymentFormRow(DataPaymentFormRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                Original_DaddyJobs ds = new Original_DaddyJobs();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "DataPaymentFormDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -5890,25 +6636,25 @@ namespace Daddy_Jobs {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class Work_formRow : global::System.Data.DataRow {
+        public partial class DataWorkRow : global::System.Data.DataRow {
             
-            private Work_formDataTable tableWork_form;
+            private DataWorkDataTable tableDataWork;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal Work_formRow(global::System.Data.DataRowBuilder rb) : 
+            internal DataWorkRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableWork_form = ((Work_formDataTable)(this.Table));
+                this.tableDataWork = ((DataWorkDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public int Код {
                 get {
-                    return ((int)(this[this.tableWork_form.КодColumn]));
+                    return ((int)(this[this.tableDataWork.КодColumn]));
                 }
                 set {
-                    this[this.tableWork_form.КодColumn] = value;
+                    this[this.tableDataWork.КодColumn] = value;
                 }
             }
             
@@ -5917,14 +6663,14 @@ namespace Daddy_Jobs {
             public string Модель {
                 get {
                     try {
-                        return ((string)(this[this.tableWork_form.МодельColumn]));
+                        return ((string)(this[this.tableDataWork.МодельColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Модель\' в таблице \'Work_form\' равно DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Модель\' в таблице \'DataWork\' равно DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableWork_form.МодельColumn] = value;
+                    this[this.tableDataWork.МодельColumn] = value;
                 }
             }
             
@@ -5933,14 +6679,14 @@ namespace Daddy_Jobs {
             public System.DateTime Дата {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tableWork_form.ДатаColumn]));
+                        return ((global::System.DateTime)(this[this.tableDataWork.ДатаColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Дата\' в таблице \'Work_form\' равно DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Дата\' в таблице \'DataWork\' равно DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableWork_form.ДатаColumn] = value;
+                    this[this.tableDataWork.ДатаColumn] = value;
                 }
             }
             
@@ -5949,30 +6695,30 @@ namespace Daddy_Jobs {
             public string Работа {
                 get {
                     try {
-                        return ((string)(this[this.tableWork_form.РаботаColumn]));
+                        return ((string)(this[this.tableDataWork.РаботаColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Работа\' в таблице \'Work_form\' равно DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Работа\' в таблице \'DataWork\' равно DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableWork_form.РаботаColumn] = value;
+                    this[this.tableDataWork.РаботаColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int Цена {
+            public int Цена_раб_ {
                 get {
                     try {
-                        return ((int)(this[this.tableWork_form.ЦенаColumn]));
+                        return ((int)(this[this.tableDataWork.Цена_раб_Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Цена\' в таблице \'Work_form\' равно DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Цена раб_\' в таблице \'DataWork\' равно DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableWork_form.ЦенаColumn] = value;
+                    this[this.tableDataWork.Цена_раб_Column] = value;
                 }
             }
             
@@ -5981,103 +6727,367 @@ namespace Daddy_Jobs {
             public string Запчасть {
                 get {
                     try {
-                        return ((string)(this[this.tableWork_form.ЗапчастьColumn]));
+                        return ((string)(this[this.tableDataWork.ЗапчастьColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Запчасть\' в таблице \'Work_form\' равно DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Запчасть\' в таблице \'DataWork\' равно DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableWork_form.ЗапчастьColumn] = value;
+                    this[this.tableDataWork.ЗапчастьColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int Цена1 {
+            public int Цена_зап_ {
                 get {
                     try {
-                        return ((int)(this[this.tableWork_form.Цена1Column]));
+                        return ((int)(this[this.tableDataWork.Цена_зап_Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Цена1\' в таблице \'Work_form\' равно DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Цена зап_\' в таблице \'DataWork\' равно DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableWork_form.Цена1Column] = value;
+                    this[this.tableDataWork.Цена_зап_Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsМодельNull() {
-                return this.IsNull(this.tableWork_form.МодельColumn);
+                return this.IsNull(this.tableDataWork.МодельColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetМодельNull() {
-                this[this.tableWork_form.МодельColumn] = global::System.Convert.DBNull;
+                this[this.tableDataWork.МодельColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsДатаNull() {
-                return this.IsNull(this.tableWork_form.ДатаColumn);
+                return this.IsNull(this.tableDataWork.ДатаColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetДатаNull() {
-                this[this.tableWork_form.ДатаColumn] = global::System.Convert.DBNull;
+                this[this.tableDataWork.ДатаColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsРаботаNull() {
-                return this.IsNull(this.tableWork_form.РаботаColumn);
+                return this.IsNull(this.tableDataWork.РаботаColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetРаботаNull() {
-                this[this.tableWork_form.РаботаColumn] = global::System.Convert.DBNull;
+                this[this.tableDataWork.РаботаColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsЦенаNull() {
-                return this.IsNull(this.tableWork_form.ЦенаColumn);
+            public bool IsЦена_раб_Null() {
+                return this.IsNull(this.tableDataWork.Цена_раб_Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetЦенаNull() {
-                this[this.tableWork_form.ЦенаColumn] = global::System.Convert.DBNull;
+            public void SetЦена_раб_Null() {
+                this[this.tableDataWork.Цена_раб_Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsЗапчастьNull() {
-                return this.IsNull(this.tableWork_form.ЗапчастьColumn);
+                return this.IsNull(this.tableDataWork.ЗапчастьColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetЗапчастьNull() {
-                this[this.tableWork_form.ЗапчастьColumn] = global::System.Convert.DBNull;
+                this[this.tableDataWork.ЗапчастьColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsЦена1Null() {
-                return this.IsNull(this.tableWork_form.Цена1Column);
+            public bool IsЦена_зап_Null() {
+                return this.IsNull(this.tableDataWork.Цена_зап_Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetЦена1Null() {
-                this[this.tableWork_form.Цена1Column] = global::System.Convert.DBNull;
+            public void SetЦена_зап_Null() {
+                this[this.tableDataWork.Цена_зап_Column] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class DataWork2Row : global::System.Data.DataRow {
+            
+            private DataWork2DataTable tableDataWork2;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal DataWork2Row(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableDataWork2 = ((DataWork2DataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int Work_code {
+                get {
+                    return ((int)(this[this.tableDataWork2.Work_codeColumn]));
+                }
+                set {
+                    this[this.tableDataWork2.Work_codeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Namination {
+                get {
+                    try {
+                        return ((string)(this[this.tableDataWork2.NaminationColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Namination\' в таблице \'DataWork2\' равно DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataWork2.NaminationColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int Spare_part_cost {
+                get {
+                    return ((int)(this[this.tableDataWork2.Spare_part_costColumn]));
+                }
+                set {
+                    this[this.tableDataWork2.Spare_part_costColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Name {
+                get {
+                    try {
+                        return ((string)(this[this.tableDataWork2.NameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Name\' в таблице \'DataWork2\' равно DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataWork2.NameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int Work_cost {
+                get {
+                    return ((int)(this[this.tableDataWork2.Work_costColumn]));
+                }
+                set {
+                    this[this.tableDataWork2.Work_costColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Comment {
+                get {
+                    try {
+                        return ((string)(this[this.tableDataWork2.CommentColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Comment\' в таблице \'DataWork2\' равно DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataWork2.CommentColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsNaminationNull() {
+                return this.IsNull(this.tableDataWork2.NaminationColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetNaminationNull() {
+                this[this.tableDataWork2.NaminationColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsNameNull() {
+                return this.IsNull(this.tableDataWork2.NameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetNameNull() {
+                this[this.tableDataWork2.NameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsCommentNull() {
+                return this.IsNull(this.tableDataWork2.CommentColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetCommentNull() {
+                this[this.tableDataWork2.CommentColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class DataPaymentFormRow : global::System.Data.DataRow {
+            
+            private DataPaymentFormDataTable tableDataPaymentForm;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal DataPaymentFormRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableDataPaymentForm = ((DataPaymentFormDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int Work_code {
+                get {
+                    return ((int)(this[this.tableDataPaymentForm.Work_codeColumn]));
+                }
+                set {
+                    this[this.tableDataPaymentForm.Work_codeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Namination {
+                get {
+                    try {
+                        return ((string)(this[this.tableDataPaymentForm.NaminationColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Namination\' в таблице \'DataPaymentForm\' равно DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataPaymentForm.NaminationColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int Spare_part_cost {
+                get {
+                    return ((int)(this[this.tableDataPaymentForm.Spare_part_costColumn]));
+                }
+                set {
+                    this[this.tableDataPaymentForm.Spare_part_costColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Name {
+                get {
+                    try {
+                        return ((string)(this[this.tableDataPaymentForm.NameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Name\' в таблице \'DataPaymentForm\' равно DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataPaymentForm.NameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int Work_cost {
+                get {
+                    return ((int)(this[this.tableDataPaymentForm.Work_costColumn]));
+                }
+                set {
+                    this[this.tableDataPaymentForm.Work_costColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Comment {
+                get {
+                    try {
+                        return ((string)(this[this.tableDataPaymentForm.CommentColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Comment\' в таблице \'DataPaymentForm\' равно DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataPaymentForm.CommentColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsNaminationNull() {
+                return this.IsNull(this.tableDataPaymentForm.NaminationColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetNaminationNull() {
+                this[this.tableDataPaymentForm.NaminationColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsNameNull() {
+                return this.IsNull(this.tableDataPaymentForm.NameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetNameNull() {
+                this[this.tableDataPaymentForm.NameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsCommentNull() {
+                return this.IsNull(this.tableDataPaymentForm.CommentColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetCommentNull() {
+                this[this.tableDataPaymentForm.CommentColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -6425,22 +7435,90 @@ namespace Daddy_Jobs {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class Work_formRowChangeEvent : global::System.EventArgs {
+        public class DataWorkRowChangeEvent : global::System.EventArgs {
             
-            private Work_formRow eventRow;
+            private DataWorkRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Work_formRowChangeEvent(Work_formRow row, global::System.Data.DataRowAction action) {
+            public DataWorkRowChangeEvent(DataWorkRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Work_formRow Row {
+            public DataWorkRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class DataWork2RowChangeEvent : global::System.EventArgs {
+            
+            private DataWork2Row eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public DataWork2RowChangeEvent(DataWork2Row row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public DataWork2Row Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class DataPaymentFormRowChangeEvent : global::System.EventArgs {
+            
+            private DataPaymentFormRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public DataPaymentFormRowChangeEvent(DataPaymentFormRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public DataPaymentFormRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -10844,7 +11922,7 @@ SELECT Work_code, Spare_part_code, Employee_code, Device_code, Code_name_of_work
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class Work_formTableAdapter : global::System.ComponentModel.Component {
+    public partial class DataWorkTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -10858,7 +11936,7 @@ SELECT Work_code, Spare_part_code, Employee_code, Device_code, Code_name_of_work
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public Work_formTableAdapter() {
+        public DataWorkTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -10955,14 +12033,14 @@ SELECT Work_code, Spare_part_code, Employee_code, Device_code, Code_name_of_work
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Work_form";
+            tableMapping.DataSetTable = "DataWork";
             tableMapping.ColumnMappings.Add("Код", "Код");
             tableMapping.ColumnMappings.Add("Модель", "Модель");
             tableMapping.ColumnMappings.Add("Дата", "Дата");
             tableMapping.ColumnMappings.Add("Работа", "Работа");
-            tableMapping.ColumnMappings.Add("Цена", "Цена");
+            tableMapping.ColumnMappings.Add("Цена раб.", "Цена раб_");
             tableMapping.ColumnMappings.Add("Запчасть", "Запчасть");
-            tableMapping.ColumnMappings.Add("Цена1", "Цена1");
+            tableMapping.ColumnMappings.Add("Цена зап.", "Цена зап_");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -10979,8 +12057,8 @@ SELECT Work_code, Spare_part_code, Employee_code, Device_code, Code_name_of_work
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT        Device.Device_code AS Код, Device.Model AS Модель, Work.Date_of_completion AS Дата, Name_of_work.Name AS Работа, Work.Work_cost AS Цена, Spare_part.Namination AS Запчасть, 
-                         Work.Spare_part_cost AS Цена
+            this._commandCollection[0].CommandText = @"SELECT        Work.Work_code AS Код, Device.Model AS Модель, Work.Date_of_completion AS Дата, Name_of_work.Name AS Работа, Work.Work_cost AS [Цена раб.], Spare_part.Namination AS Запчасть, 
+                         Work.Spare_part_cost AS [Цена зап.]
 FROM            Device INNER JOIN
                          Work ON Device.Device_code = Work.Device_code INNER JOIN
                          Name_of_work ON Work.Code_name_of_work = Name_of_work.Code_name_of_work INNER JOIN
@@ -10992,7 +12070,7 @@ FROM            Device INNER JOIN
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(Original_DaddyJobs.Work_formDataTable dataTable) {
+        public virtual int Fill(Original_DaddyJobs.DataWorkDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -11005,9 +12083,359 @@ FROM            Device INNER JOIN
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual Original_DaddyJobs.Work_formDataTable GetData() {
+        public virtual Original_DaddyJobs.DataWorkDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            Original_DaddyJobs.Work_formDataTable dataTable = new Original_DaddyJobs.Work_formDataTable();
+            Original_DaddyJobs.DataWorkDataTable dataTable = new Original_DaddyJobs.DataWorkDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class DataWork2TableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public DataWork2TableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "DataWork2";
+            tableMapping.ColumnMappings.Add("Work_code", "Work_code");
+            tableMapping.ColumnMappings.Add("Namination", "Namination");
+            tableMapping.ColumnMappings.Add("Spare_part_cost", "Spare_part_cost");
+            tableMapping.ColumnMappings.Add("Name", "Name");
+            tableMapping.ColumnMappings.Add("Work_cost", "Work_cost");
+            tableMapping.ColumnMappings.Add("Comment", "Comment");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::Daddy_Jobs.Properties.Settings.Default.DaddyJobsConnectionString1;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = @"SELECT        Work.Work_code, Spare_part.Namination, Work.Spare_part_cost, Name_of_work.Name, Work.Work_cost, Work.Comment
+FROM            Work INNER JOIN
+                         Spare_part ON Work.Spare_part_code = Spare_part.Spare_part_code INNER JOIN
+                         Name_of_work ON Work.Code_name_of_work = Name_of_work.Code_name_of_work";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(Original_DaddyJobs.DataWork2DataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual Original_DaddyJobs.DataWork2DataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            Original_DaddyJobs.DataWork2DataTable dataTable = new Original_DaddyJobs.DataWork2DataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class DataPaymentFormTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public DataPaymentFormTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "DataPaymentForm";
+            tableMapping.ColumnMappings.Add("Work_code", "Work_code");
+            tableMapping.ColumnMappings.Add("Namination", "Namination");
+            tableMapping.ColumnMappings.Add("Spare_part_cost", "Spare_part_cost");
+            tableMapping.ColumnMappings.Add("Name", "Name");
+            tableMapping.ColumnMappings.Add("Work_cost", "Work_cost");
+            tableMapping.ColumnMappings.Add("Comment", "Comment");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::Daddy_Jobs.Properties.Settings.Default.DaddyJobsConnectionString1;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = @"SELECT        Work.Work_code, Spare_part.Namination, Work.Spare_part_cost, Name_of_work.Name, Work.Work_cost, Work.Comment
+FROM            Spare_part INNER JOIN
+                         Work ON Spare_part.Spare_part_code = Work.Spare_part_code INNER JOIN
+                         Name_of_work ON Work.Code_name_of_work = Name_of_work.Code_name_of_work";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(Original_DaddyJobs.DataPaymentFormDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual Original_DaddyJobs.DataPaymentFormDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            Original_DaddyJobs.DataPaymentFormDataTable dataTable = new Original_DaddyJobs.DataPaymentFormDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
