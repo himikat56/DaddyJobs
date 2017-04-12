@@ -206,7 +206,7 @@ namespace Daddy_Jobs
         }
         public void setLogin(String login)
         {
-            this.label10.Text = "Пользователь:  " + login;
+            this.label10.Text = "Пользователь:  " + login.TrimEnd();
         }
 
         private void выходToolStripMenuItem_Click(object sender, EventArgs e)
@@ -225,6 +225,7 @@ namespace Daddy_Jobs
         {
             HideGroupBox();
             groupBox1.Show();
+
         }
 
         private void работыСУстрйоствомToolStripMenuItem_Click(object sender, EventArgs e)
@@ -446,10 +447,17 @@ namespace Daddy_Jobs
                         {
                             DateTime now = DateTime.Now;
                             AddPayment(Convert.ToInt32(textBox10.Text), Convert.ToInt32(textBox9.Text), textBox14.Text, now.ToString("d"));
+                            AddWork(13, 0, 1, Convert.ToInt32(textBox10.Text), 6, 0, now.ToString("d"), "");//Выдача устройства
                         }
                     }
                 }
             }
+        }
+
+        private void рассылкаToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form smsF = new SMSform();
+            smsF.Show();
         }
     }
 }

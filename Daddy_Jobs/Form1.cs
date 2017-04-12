@@ -211,7 +211,7 @@ public string GetPassword(string param)
                         MessageBox.Show("Пароль введен не верно!\nОсталось попыток " + BadPassword.ToString(),"Ошибка !");
                     }else
                     {
-                        MessageBox.Show("Попытаи ввода пароля исчерпаны!");
+                        MessageBox.Show("Попытки ввода пароля исчерпаны!");
                         this.Close();
                     }
                 }

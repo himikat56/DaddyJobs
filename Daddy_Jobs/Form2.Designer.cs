@@ -60,6 +60,7 @@
             this.приемУстройстваToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.работыСУстрйоствомToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.выдачаУстрйостваToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.смсУведомлениеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.помощьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.помощьToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -109,12 +110,21 @@
             this.nameofworkBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label10 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.textBox14 = new System.Windows.Forms.TextBox();
             this.label29 = new System.Windows.Forms.Label();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dataWork2BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.original_DaddyJobs2 = new Daddy_Jobs.Original_DaddyJobs();
+            this.workcodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.naminationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sparepartcostDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.workcostDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.commentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataPaymentFormBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.button6 = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -123,6 +133,8 @@
             this.label15 = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
             this.textBox10 = new System.Windows.Forms.TextBox();
+            this.dataWork2BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.original_DaddyJobs2 = new Daddy_Jobs.Original_DaddyJobs();
             this.manufacturerTableAdapter = new Daddy_Jobs.DaddyJobsDataSet2TableAdapters.ManufacturerTableAdapter();
             this.name_of_workTableAdapter = new Daddy_Jobs.DaddyJobsDataSet2TableAdapters.Name_of_workTableAdapter();
             this.daddyJobsDataSet21BindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -148,16 +160,9 @@
             this.workBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.workTableAdapter1 = new Daddy_Jobs.Original_DaddyJobsTableAdapters.WorkTableAdapter();
             this.dataWork2TableAdapter = new Daddy_Jobs.Original_DaddyJobsTableAdapters.DataWork2TableAdapter();
-            this.dataPaymentFormBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataPaymentFormTableAdapter = new Daddy_Jobs.Original_DaddyJobsTableAdapters.DataPaymentFormTableAdapter();
-            this.workcodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.naminationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sparepartcostDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.workcostDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.commentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.label30 = new System.Windows.Forms.Label();
+            this.рассылкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.отчетToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.manufacturerBindingSource)).BeginInit();
@@ -177,9 +182,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.nameofworkBindingSource)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataPaymentFormBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataWork2BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.original_DaddyJobs2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.daddyJobsDataSet21BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sparepartBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sparepartBindingSource1)).BeginInit();
@@ -195,7 +201,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.originalDaddyJobs1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sparepartBindingSource4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.workBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataPaymentFormBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -400,6 +405,7 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.аккаунтToolStripMenuItem,
             this.устрйостваToolStripMenuItem,
+            this.смсУведомлениеToolStripMenuItem,
             this.помощьToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -460,6 +466,15 @@
             this.выдачаУстрйостваToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
             this.выдачаУстрйостваToolStripMenuItem.Text = "Выдача устрйоства";
             this.выдачаУстрйостваToolStripMenuItem.Click += new System.EventHandler(this.выдачаУстрйостваToolStripMenuItem_Click);
+            // 
+            // смсУведомлениеToolStripMenuItem
+            // 
+            this.смсУведомлениеToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.рассылкаToolStripMenuItem,
+            this.отчетToolStripMenuItem});
+            this.смсУведомлениеToolStripMenuItem.Name = "смсУведомлениеToolStripMenuItem";
+            this.смсУведомлениеToolStripMenuItem.Size = new System.Drawing.Size(118, 20);
+            this.смсУведомлениеToolStripMenuItem.Text = "Смс уведомление";
             // 
             // помощьToolStripMenuItem
             // 
@@ -926,6 +941,8 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.comboBox2);
+            this.groupBox3.Controls.Add(this.label31);
             this.groupBox3.Controls.Add(this.label30);
             this.groupBox3.Controls.Add(this.textBox14);
             this.groupBox3.Controls.Add(this.label29);
@@ -947,10 +964,43 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Visible = false;
             // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(57, 188);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(50, 21);
+            this.comboBox2.TabIndex = 32;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(10, 191);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(47, 13);
+            this.label31.TabIndex = 31;
+            this.label31.Text = "Скидка:";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(10, 252);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(77, 13);
+            this.label30.TabIndex = 30;
+            this.label30.Text = "Комментарий";
+            // 
+            // textBox14
+            // 
+            this.textBox14.Location = new System.Drawing.Point(13, 268);
+            this.textBox14.Name = "textBox14";
+            this.textBox14.Size = new System.Drawing.Size(229, 20);
+            this.textBox14.TabIndex = 29;
+            // 
             // label29
             // 
             this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(10, 183);
+            this.label29.Location = new System.Drawing.Point(10, 216);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(50, 13);
             this.label29.TabIndex = 28;
@@ -962,7 +1012,7 @@
             "DaddyJobs."});
             this.textBox9.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.textBox9.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.textBox9.Location = new System.Drawing.Point(13, 200);
+            this.textBox9.Location = new System.Drawing.Point(13, 230);
             this.textBox9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox9.Name = "textBox9";
             this.textBox9.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -997,19 +1047,57 @@
             this.dataGridView2.Size = new System.Drawing.Size(514, 220);
             this.dataGridView2.TabIndex = 25;
             // 
-            // dataWork2BindingSource
+            // workcodeDataGridViewTextBoxColumn
             // 
-            this.dataWork2BindingSource.DataMember = "DataWork2";
-            this.dataWork2BindingSource.DataSource = this.original_DaddyJobs2;
+            this.workcodeDataGridViewTextBoxColumn.DataPropertyName = "Work_code";
+            this.workcodeDataGridViewTextBoxColumn.HeaderText = "Код";
+            this.workcodeDataGridViewTextBoxColumn.Name = "workcodeDataGridViewTextBoxColumn";
+            this.workcodeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.workcodeDataGridViewTextBoxColumn.Width = 40;
             // 
-            // original_DaddyJobs2
+            // naminationDataGridViewTextBoxColumn
             // 
-            this.original_DaddyJobs2.DataSetName = "Original_DaddyJobs";
-            this.original_DaddyJobs2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.naminationDataGridViewTextBoxColumn.DataPropertyName = "Namination";
+            this.naminationDataGridViewTextBoxColumn.HeaderText = "Запчасть";
+            this.naminationDataGridViewTextBoxColumn.Name = "naminationDataGridViewTextBoxColumn";
+            this.naminationDataGridViewTextBoxColumn.Width = 80;
+            // 
+            // sparepartcostDataGridViewTextBoxColumn
+            // 
+            this.sparepartcostDataGridViewTextBoxColumn.DataPropertyName = "Spare_part_cost";
+            this.sparepartcostDataGridViewTextBoxColumn.HeaderText = "Стоимость запчасти";
+            this.sparepartcostDataGridViewTextBoxColumn.Name = "sparepartcostDataGridViewTextBoxColumn";
+            this.sparepartcostDataGridViewTextBoxColumn.Width = 80;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Работа";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.Width = 80;
+            // 
+            // workcostDataGridViewTextBoxColumn
+            // 
+            this.workcostDataGridViewTextBoxColumn.DataPropertyName = "Work_cost";
+            this.workcostDataGridViewTextBoxColumn.HeaderText = "Стоимость работы";
+            this.workcostDataGridViewTextBoxColumn.Name = "workcostDataGridViewTextBoxColumn";
+            this.workcostDataGridViewTextBoxColumn.Width = 80;
+            // 
+            // commentDataGridViewTextBoxColumn
+            // 
+            this.commentDataGridViewTextBoxColumn.DataPropertyName = "Comment";
+            this.commentDataGridViewTextBoxColumn.HeaderText = "Комментарий мастера";
+            this.commentDataGridViewTextBoxColumn.Name = "commentDataGridViewTextBoxColumn";
+            this.commentDataGridViewTextBoxColumn.Width = 110;
+            // 
+            // dataPaymentFormBindingSource
+            // 
+            this.dataPaymentFormBindingSource.DataMember = "DataPaymentForm";
+            this.dataPaymentFormBindingSource.DataSource = this.original_DaddyJobs;
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(122, 284);
+            this.button6.Location = new System.Drawing.Point(122, 299);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(110, 30);
             this.button6.TabIndex = 15;
@@ -1030,7 +1118,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(120, 203);
+            this.label11.Location = new System.Drawing.Point(120, 191);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(55, 13);
             this.label11.TabIndex = 23;
@@ -1067,7 +1155,7 @@
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(6, 283);
+            this.button7.Location = new System.Drawing.Point(6, 299);
             this.button7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(110, 30);
@@ -1089,6 +1177,16 @@
             this.textBox10.Size = new System.Drawing.Size(100, 20);
             this.textBox10.TabIndex = 7;
             this.textBox10.TextChanged += new System.EventHandler(this.textBox10_TextChanged);
+            // 
+            // dataWork2BindingSource
+            // 
+            this.dataWork2BindingSource.DataMember = "DataWork2";
+            this.dataWork2BindingSource.DataSource = this.original_DaddyJobs2;
+            // 
+            // original_DaddyJobs2
+            // 
+            this.original_DaddyJobs2.DataSetName = "Original_DaddyJobs";
+            this.original_DaddyJobs2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // manufacturerTableAdapter
             // 
@@ -1205,73 +1303,22 @@
             // 
             this.dataWork2TableAdapter.ClearBeforeFill = true;
             // 
-            // dataPaymentFormBindingSource
-            // 
-            this.dataPaymentFormBindingSource.DataMember = "DataPaymentForm";
-            this.dataPaymentFormBindingSource.DataSource = this.original_DaddyJobs;
-            // 
             // dataPaymentFormTableAdapter
             // 
             this.dataPaymentFormTableAdapter.ClearBeforeFill = true;
             // 
-            // workcodeDataGridViewTextBoxColumn
+            // рассылкаToolStripMenuItem
             // 
-            this.workcodeDataGridViewTextBoxColumn.DataPropertyName = "Work_code";
-            this.workcodeDataGridViewTextBoxColumn.HeaderText = "Код";
-            this.workcodeDataGridViewTextBoxColumn.Name = "workcodeDataGridViewTextBoxColumn";
-            this.workcodeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.workcodeDataGridViewTextBoxColumn.Width = 40;
+            this.рассылкаToolStripMenuItem.Name = "рассылкаToolStripMenuItem";
+            this.рассылкаToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.рассылкаToolStripMenuItem.Text = "Рассылка";
+            this.рассылкаToolStripMenuItem.Click += new System.EventHandler(this.рассылкаToolStripMenuItem_Click);
             // 
-            // naminationDataGridViewTextBoxColumn
+            // отчетToolStripMenuItem
             // 
-            this.naminationDataGridViewTextBoxColumn.DataPropertyName = "Namination";
-            this.naminationDataGridViewTextBoxColumn.HeaderText = "Запчасть";
-            this.naminationDataGridViewTextBoxColumn.Name = "naminationDataGridViewTextBoxColumn";
-            this.naminationDataGridViewTextBoxColumn.Width = 80;
-            // 
-            // sparepartcostDataGridViewTextBoxColumn
-            // 
-            this.sparepartcostDataGridViewTextBoxColumn.DataPropertyName = "Spare_part_cost";
-            this.sparepartcostDataGridViewTextBoxColumn.HeaderText = "Стоимость запчасти";
-            this.sparepartcostDataGridViewTextBoxColumn.Name = "sparepartcostDataGridViewTextBoxColumn";
-            this.sparepartcostDataGridViewTextBoxColumn.Width = 80;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Работа";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.Width = 80;
-            // 
-            // workcostDataGridViewTextBoxColumn
-            // 
-            this.workcostDataGridViewTextBoxColumn.DataPropertyName = "Work_cost";
-            this.workcostDataGridViewTextBoxColumn.HeaderText = "Стоимость работы";
-            this.workcostDataGridViewTextBoxColumn.Name = "workcostDataGridViewTextBoxColumn";
-            this.workcostDataGridViewTextBoxColumn.Width = 80;
-            // 
-            // commentDataGridViewTextBoxColumn
-            // 
-            this.commentDataGridViewTextBoxColumn.DataPropertyName = "Comment";
-            this.commentDataGridViewTextBoxColumn.HeaderText = "Комментарий мастера";
-            this.commentDataGridViewTextBoxColumn.Name = "commentDataGridViewTextBoxColumn";
-            this.commentDataGridViewTextBoxColumn.Width = 110;
-            // 
-            // textBox14
-            // 
-            this.textBox14.Location = new System.Drawing.Point(13, 240);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(229, 20);
-            this.textBox14.TabIndex = 29;
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(10, 224);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(77, 13);
-            this.label30.TabIndex = 30;
-            this.label30.Text = "Комментарий";
+            this.отчетToolStripMenuItem.Name = "отчетToolStripMenuItem";
+            this.отчетToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.отчетToolStripMenuItem.Text = "Отчет";
             // 
             // Form2
             // 
@@ -1282,9 +1329,9 @@
             this.Controls.Add(this.label10);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form2";
@@ -1313,9 +1360,10 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataPaymentFormBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataWork2BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.original_DaddyJobs2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.daddyJobsDataSet21BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sparepartBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sparepartBindingSource1)).EndInit();
@@ -1331,7 +1379,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.originalDaddyJobs1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sparepartBindingSource4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.workBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataPaymentFormBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1467,5 +1514,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn commentDataGridViewTextBoxColumn;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.ToolStripMenuItem смсУведомлениеToolStripMenuItem;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.ToolStripMenuItem рассылкаToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem отчетToolStripMenuItem;
     }
 }
