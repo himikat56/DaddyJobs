@@ -11,12 +11,14 @@ using System.Data.SqlClient;
 
 namespace Daddy_Jobs
 {
-    public partial class Form2 : Form
+    public partial class Main_Form : Form
     {
+        public static string idDevice;
         string GlobalConnection = "Data Source=TESTHDD\\SQLEXPRESS;Initial Catalog=DaddyJobs;Integrated Security=True";
-        public Form2()
+        public Main_Form()
         {
             InitializeComponent();
+            groupBox4.Show();
             var source = new AutoCompleteStringCollection();
             var sourceDevice = new AutoCompleteStringCollection();
             using (SqlConnection conn = new SqlConnection(GlobalConnection))
@@ -60,15 +62,16 @@ namespace Daddy_Jobs
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "original_DaddyJobs.DataPaymentForm". При необходимости она может быть перемещена или удалена.
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "original_DaddyJobs3.Type_of_repair". При необходимости она может быть перемещена или удалена.
+            this.type_of_repairTableAdapter.Fill(this.original_DaddyJobs3.Type_of_repair);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "original_DaddyJobs.HomeTable". При необходимости она может быть перемещена или удалена.
+            this.homeTableTableAdapter.Fill(this.original_DaddyJobs.HomeTable);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "original_DaddyJobs.Type_of_repair". При необходимости она может быть перемещена или удалена.
+            this.type_of_repairTableAdapter.Fill(this.original_DaddyJobs.Type_of_repair);
             this.dataPaymentFormTableAdapter.Fill(this.original_DaddyJobs.DataPaymentForm);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "original_DaddyJobs2.DataWork". При необходимости она может быть перемещена или удалена.
             this.dataWorkTableAdapter.Fill(this.original_DaddyJobs2.DataWork);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "original_DaddyJobs2.DataWork2". При необходимости она может быть перемещена или удалена.
             this.dataWork2TableAdapter.Fill(this.original_DaddyJobs2.DataWork2);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "original_DaddyJobs.Work". При необходимости она может быть перемещена или удалена.
             this.workTableAdapter1.Fill(this.original_DaddyJobs.Work);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "original_DaddyJobs.DataWork". При необходимости она может быть перемещена или удалена.
             this.dataWorkTableAdapter.Fill(this.original_DaddyJobs.DataWork);
             this.spare_partTableAdapter2.Fill(this.original_DaddyJobs1.Spare_part);
             this.name_of_workTableAdapter1.Fill(this.original_DaddyJobs.Name_of_work);
@@ -217,7 +220,7 @@ namespace Daddy_Jobs
         private void релогToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
-            Form1 form = new Form1();
+            Authorization_form form = new Authorization_form();
             form.Show();
         }
 
@@ -239,6 +242,7 @@ namespace Daddy_Jobs
             groupBox1.Hide();
             groupBox2.Hide();
             groupBox3.Hide();
+            groupBox4.Hide();
 
         }
 
@@ -458,6 +462,28 @@ namespace Daddy_Jobs
         {
             Form smsF = new SMSform();
             smsF.Show();
+        }
+
+        private void groupBox3_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        public void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //MessageBox.Show(dataGridView3.CurrentRow.Cells[0].Value.ToString());
+            idDevice = dataGridView3.CurrentRow.Cells[0].Value.ToString();
+            Form editF = new Edit_form();
+            editF.Show(this);
+            
+
+
+        }
+
+        private void главнаяToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            HideGroupBox();
+            groupBox4.Show();
         }
     }
 }

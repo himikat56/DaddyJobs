@@ -8,12 +8,12 @@ namespace Daddy_Jobs
 {
     class Class1
     {
-        Form2 form;
+        Main_Form form;
         string login;
         
      public Class1()
         {
-            this.form = new Form2();
+            this.form = new Main_Form();
         }
         public String setLogin(string login)
         {

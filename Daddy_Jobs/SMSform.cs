@@ -69,7 +69,7 @@ namespace Daddy_Jobs
                             while (r.Read())
                             {
                                 addres++;
-                                //SendingSMS(Convert.ToString(r[1]), Convert.ToInt32(r[0]), Convert.ToString(r[2]), Convert.ToInt32(r[3]));
+                                MessageBox.Show( SendingSMS(Convert.ToString(r[1]), Convert.ToInt32(r[0]), Convert.ToString(r[2]), Convert.ToInt32(r[3])).ToString());
                                 var cmd = new SqlCommand("UPDATE Device SET SMS_sending = 1 WHERE Device_code = @device_code", conn);
                                 cmd.Parameters.AddWithValue("@device_code", Convert.ToInt32(r[0]));
                                // cmd.ExecuteNonQuery();
@@ -80,19 +80,21 @@ namespace Daddy_Jobs
                 conn.Close();
                 string sklon = "";
                 switch (addres) { case 1:  sklon = " уведомление."; break; case 2: case 3: case 4: sklon = " уведомления."; break; default:  sklon = " уведомлений."; break; }
-                MessageBox.Show("Отправлено "+ addres.ToString() + sklon);
+               // MessageBox.Show("Отправлено "+ addres.ToString() + sklon);
                 SMSform.ActiveForm.Close();
             }//
         }
-        private void SendingSMS(string phonenumber,  int order_code, string model, int payment )
+        private int SendingSMS(string phonenumber,  int order_code, string model, int payment )
         {
             Regex regex = new Regex(@"^9");
+            int resp = 0;
             if (regex.IsMatch(phonenumber) && phonenumber.TrimEnd().Length == 10)
             {
-                string myApiKey = "3B17699B-0495-CFA4-F2AB-FFFC5CA6B9";
-                SmsRu.SmsRu sms = new SmsRu.SmsRu(myApiKey);
+                SmsRu.SmsRu sms = new SmsRu.SmsRu("3B17699B-0495-CFA4-F2AB-FFFC5CA6B9B8");
                 var response = sms.Send(phonenumber.TrimEnd(), "Ваш заказ №A" + order_code + " (" + model.TrimEnd() + ") Готов! К оплате " + payment + " руб");
+                resp = response.Status;
             }
+            return resp;
         }
     }
 }

@@ -34,10 +34,11 @@ C:\Users\Роман\Documents\Visual Studio 2015\Projects\Daddy_Jobs\Daddy_Jobs\
 C:\Users\Роман\Documents\Visual Studio 2015\Projects\Daddy_Jobs\Daddy_Jobs\bin\Debug\Daddy_Jobs.exe
 C:\Users\Роман\Documents\Visual Studio 2015\Projects\Daddy_Jobs\Daddy_Jobs\bin\Debug\Daddy_Jobs.pdb
 C:\Users\Роман\Documents\Visual Studio 2015\Projects\Daddy_Jobs\Daddy_Jobs\obj\Debug\Daddy_Jobs.csprojResolveAssemblyReference.cache
-C:\Users\Роман\Documents\Visual Studio 2015\Projects\Daddy_Jobs\Daddy_Jobs\obj\Debug\Daddy_Jobs.Form1.resources
-C:\Users\Роман\Documents\Visual Studio 2015\Projects\Daddy_Jobs\Daddy_Jobs\obj\Debug\Daddy_Jobs.Form2.resources
 C:\Users\Роман\Documents\Visual Studio 2015\Projects\Daddy_Jobs\Daddy_Jobs\obj\Debug\Daddy_Jobs.Properties.Resources.resources
 C:\Users\Роман\Documents\Visual Studio 2015\Projects\Daddy_Jobs\Daddy_Jobs\obj\Debug\Daddy_Jobs.csproj.GenerateResource.Cache
 C:\Users\Роман\Documents\Visual Studio 2015\Projects\Daddy_Jobs\Daddy_Jobs\obj\Debug\Daddy_Jobs.csproj.ResolveComReference.cache
 C:\Users\Роман\Documents\Visual Studio 2015\Projects\Daddy_Jobs\Daddy_Jobs\bin\Debug\SmsRu.dll
 C:\Users\Роман\Documents\Visual Studio 2015\Projects\Daddy_Jobs\Daddy_Jobs\obj\Debug\Daddy_Jobs.SMSform.resources
+C:\Users\Роман\Documents\Visual Studio 2015\Projects\Daddy_Jobs\Daddy_Jobs\obj\Debug\Daddy_Jobs.Main_Form.resources
+C:\Users\Роман\Documents\Visual Studio 2015\Projects\Daddy_Jobs\Daddy_Jobs\obj\Debug\Daddy_Jobs.Authorization_form.resources
+C:\Users\Роман\Documents\Visual Studio 2015\Projects\Daddy_Jobs\Daddy_Jobs\obj\Debug\Daddy_Jobs.Edit_form.resources

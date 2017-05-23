@@ -15,13 +15,13 @@ using System.Windows.Forms;
 
 namespace Daddy_Jobs
 {
-    public partial class Form1 : Form
+    public partial class Authorization_form : Form
     {
 
         private Class1 model;
         int BadPassword = 3;
         //static string connectionString = @"Data Source=HIMIKAT;Initial Catalog=DaddyJobs;Integrated Security=True";
-        public Form1()
+        public Authorization_form()
         {
             this.model = new Class1();
             InitializeComponent();

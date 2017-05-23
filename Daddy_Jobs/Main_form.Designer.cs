@@ -1,6 +1,6 @@
 ﻿namespace Daddy_Jobs
 {
-    partial class Form2
+    partial class Main_Form
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main_Form));
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -53,6 +53,7 @@
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.главнаяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.аккаунтToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.релогToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -61,10 +62,16 @@
             this.работыСУстрйоствомToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.выдачаУстрйостваToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.смсУведомлениеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.рассылкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.отчетToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.помощьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.помощьToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.typeofrepairBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.original_DaddyJobs3 = new Daddy_Jobs.Original_DaddyJobs();
+            this.label32 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
@@ -104,6 +111,10 @@
             this.label19 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.textBox12 = new System.Windows.Forms.TextBox();
+            this.typeofrepairBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.originalDaddyJobsBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.typeofrepairBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.originalDaddyJobsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.original_DaddyJobs1 = new Daddy_Jobs.Original_DaddyJobs();
             this.daddy_JobsDataSet1 = new Daddy_Jobs.Daddy_JobsDataSet();
             this.nameofworkBindingSource5 = new System.Windows.Forms.BindingSource(this.components);
@@ -161,14 +172,31 @@
             this.workTableAdapter1 = new Daddy_Jobs.Original_DaddyJobsTableAdapters.WorkTableAdapter();
             this.dataWork2TableAdapter = new Daddy_Jobs.Original_DaddyJobsTableAdapters.DataWork2TableAdapter();
             this.dataPaymentFormTableAdapter = new Daddy_Jobs.Original_DaddyJobsTableAdapters.DataPaymentFormTableAdapter();
-            this.рассылкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.отчетToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.originalDaddyJobsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.devicecodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.naminationDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.expr1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.modelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.malfunctionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fIODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phonenumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.homeTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.originalDaddyJobsBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.homeTableTableAdapter = new Daddy_Jobs.Original_DaddyJobsTableAdapters.HomeTableTableAdapter();
+            this.type_of_repairTableAdapter = new Daddy_Jobs.Original_DaddyJobsTableAdapters.Type_of_repairTableAdapter();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.label33 = new System.Windows.Forms.Label();
+            this.справочникиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.manufacturerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.daddyJobsDataSet21)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.typeofrepairBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.original_DaddyJobs3)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataWorkBindingSource)).BeginInit();
@@ -176,6 +204,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.sparepartBindingSource3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nameofworkBindingSource7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.typeofrepairBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.originalDaddyJobsBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.typeofrepairBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.originalDaddyJobsBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.original_DaddyJobs1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.daddy_JobsDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nameofworkBindingSource5)).BeginInit();
@@ -201,6 +233,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.originalDaddyJobs1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sparepartBindingSource4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.workBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.originalDaddyJobsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.homeTableBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.originalDaddyJobsBindingSource3)).BeginInit();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // label2
@@ -403,15 +440,24 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.главнаяToolStripMenuItem,
             this.аккаунтToolStripMenuItem,
             this.устрйостваToolStripMenuItem,
             this.смсУведомлениеToolStripMenuItem,
+            this.справочникиToolStripMenuItem,
             this.помощьToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(794, 24);
             this.menuStrip1.TabIndex = 27;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // главнаяToolStripMenuItem
+            // 
+            this.главнаяToolStripMenuItem.Name = "главнаяToolStripMenuItem";
+            this.главнаяToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
+            this.главнаяToolStripMenuItem.Text = "Главная";
+            this.главнаяToolStripMenuItem.Click += new System.EventHandler(this.главнаяToolStripMenuItem_Click);
             // 
             // аккаунтToolStripMenuItem
             // 
@@ -444,7 +490,7 @@
             this.выдачаУстрйостваToolStripMenuItem});
             this.устрйостваToolStripMenuItem.Name = "устрйостваToolStripMenuItem";
             this.устрйостваToolStripMenuItem.Size = new System.Drawing.Size(81, 20);
-            this.устрйостваToolStripMenuItem.Text = "Устрйоства";
+            this.устрйостваToolStripMenuItem.Text = "Устройства";
             // 
             // приемУстройстваToolStripMenuItem
             // 
@@ -476,6 +522,19 @@
             this.смсУведомлениеToolStripMenuItem.Size = new System.Drawing.Size(118, 20);
             this.смсУведомлениеToolStripMenuItem.Text = "Смс уведомление";
             // 
+            // рассылкаToolStripMenuItem
+            // 
+            this.рассылкаToolStripMenuItem.Name = "рассылкаToolStripMenuItem";
+            this.рассылкаToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
+            this.рассылкаToolStripMenuItem.Text = "Рассылка";
+            this.рассылкаToolStripMenuItem.Click += new System.EventHandler(this.рассылкаToolStripMenuItem_Click);
+            // 
+            // отчетToolStripMenuItem
+            // 
+            this.отчетToolStripMenuItem.Name = "отчетToolStripMenuItem";
+            this.отчетToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
+            this.отчетToolStripMenuItem.Text = "Отчет";
+            // 
             // помощьToolStripMenuItem
             // 
             this.помощьToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlLightLight;
@@ -500,6 +559,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.comboBox5);
+            this.groupBox1.Controls.Add(this.label32);
             this.groupBox1.Controls.Add(this.label25);
             this.groupBox1.Controls.Add(this.label24);
             this.groupBox1.Controls.Add(this.checkedListBox1);
@@ -534,6 +595,36 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Visible = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // comboBox5
+            // 
+            this.comboBox5.DataSource = this.typeofrepairBindingSource2;
+            this.comboBox5.DisplayMember = "Nomination";
+            this.comboBox5.FormattingEnabled = true;
+            this.comboBox5.Location = new System.Drawing.Point(355, 249);
+            this.comboBox5.Name = "comboBox5";
+            this.comboBox5.Size = new System.Drawing.Size(100, 21);
+            this.comboBox5.TabIndex = 37;
+            this.comboBox5.ValueMember = "Nomination";
+            // 
+            // typeofrepairBindingSource2
+            // 
+            this.typeofrepairBindingSource2.DataMember = "Type_of_repair";
+            this.typeofrepairBindingSource2.DataSource = this.original_DaddyJobs3;
+            // 
+            // original_DaddyJobs3
+            // 
+            this.original_DaddyJobs3.DataSetName = "Original_DaddyJobs";
+            this.original_DaddyJobs3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(352, 229);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(72, 13);
+            this.label32.TabIndex = 36;
+            this.label32.Text = "Тип ремонта";
             // 
             // label25
             // 
@@ -908,6 +999,26 @@
             this.textBox12.TabIndex = 7;
             this.textBox12.TextChanged += new System.EventHandler(this.textBox12_TextChanged);
             // 
+            // typeofrepairBindingSource1
+            // 
+            this.typeofrepairBindingSource1.DataMember = "Type_of_repair";
+            this.typeofrepairBindingSource1.DataSource = this.original_DaddyJobs;
+            // 
+            // originalDaddyJobsBindingSource2
+            // 
+            this.originalDaddyJobsBindingSource2.DataSource = this.original_DaddyJobs;
+            this.originalDaddyJobsBindingSource2.Position = 0;
+            // 
+            // typeofrepairBindingSource
+            // 
+            this.typeofrepairBindingSource.DataMember = "Type_of_repair";
+            this.typeofrepairBindingSource.DataSource = this.original_DaddyJobs;
+            // 
+            // originalDaddyJobsBindingSource1
+            // 
+            this.originalDaddyJobsBindingSource1.DataSource = this.original_DaddyJobs;
+            this.originalDaddyJobsBindingSource1.Position = 0;
+            // 
             // original_DaddyJobs1
             // 
             this.original_DaddyJobs1.DataSetName = "Original_DaddyJobs";
@@ -963,6 +1074,7 @@
             this.groupBox3.TabIndex = 31;
             this.groupBox3.TabStop = false;
             this.groupBox3.Visible = false;
+            this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
             // comboBox2
             // 
@@ -1307,20 +1419,128 @@
             // 
             this.dataPaymentFormTableAdapter.ClearBeforeFill = true;
             // 
-            // рассылкаToolStripMenuItem
+            // originalDaddyJobsBindingSource
             // 
-            this.рассылкаToolStripMenuItem.Name = "рассылкаToolStripMenuItem";
-            this.рассылкаToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.рассылкаToolStripMenuItem.Text = "Рассылка";
-            this.рассылкаToolStripMenuItem.Click += new System.EventHandler(this.рассылкаToolStripMenuItem_Click);
+            this.originalDaddyJobsBindingSource.DataSource = this.original_DaddyJobs;
+            this.originalDaddyJobsBindingSource.Position = 0;
             // 
-            // отчетToolStripMenuItem
+            // dataGridView3
             // 
-            this.отчетToolStripMenuItem.Name = "отчетToolStripMenuItem";
-            this.отчетToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.отчетToolStripMenuItem.Text = "Отчет";
+            this.dataGridView3.AutoGenerateColumns = false;
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.devicecodeDataGridViewTextBoxColumn,
+            this.naminationDataGridViewTextBoxColumn1,
+            this.expr1DataGridViewTextBoxColumn,
+            this.modelDataGridViewTextBoxColumn,
+            this.malfunctionDataGridViewTextBoxColumn,
+            this.fIODataGridViewTextBoxColumn,
+            this.phonenumberDataGridViewTextBoxColumn});
+            this.dataGridView3.DataSource = this.homeTableBindingSource;
+            this.dataGridView3.Location = new System.Drawing.Point(6, 52);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.Size = new System.Drawing.Size(770, 279);
+            this.dataGridView3.TabIndex = 32;
+            this.dataGridView3.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentClick);
             // 
-            // Form2
+            // devicecodeDataGridViewTextBoxColumn
+            // 
+            this.devicecodeDataGridViewTextBoxColumn.DataPropertyName = "Device_code";
+            this.devicecodeDataGridViewTextBoxColumn.HeaderText = "Код";
+            this.devicecodeDataGridViewTextBoxColumn.Name = "devicecodeDataGridViewTextBoxColumn";
+            this.devicecodeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.devicecodeDataGridViewTextBoxColumn.Width = 50;
+            // 
+            // naminationDataGridViewTextBoxColumn1
+            // 
+            this.naminationDataGridViewTextBoxColumn1.DataPropertyName = "Namination";
+            this.naminationDataGridViewTextBoxColumn1.HeaderText = "Статус";
+            this.naminationDataGridViewTextBoxColumn1.Name = "naminationDataGridViewTextBoxColumn1";
+            this.naminationDataGridViewTextBoxColumn1.Width = 80;
+            // 
+            // expr1DataGridViewTextBoxColumn
+            // 
+            this.expr1DataGridViewTextBoxColumn.DataPropertyName = "Expr1";
+            this.expr1DataGridViewTextBoxColumn.HeaderText = "Производитель";
+            this.expr1DataGridViewTextBoxColumn.Name = "expr1DataGridViewTextBoxColumn";
+            // 
+            // modelDataGridViewTextBoxColumn
+            // 
+            this.modelDataGridViewTextBoxColumn.DataPropertyName = "Model";
+            this.modelDataGridViewTextBoxColumn.HeaderText = "Модель";
+            this.modelDataGridViewTextBoxColumn.Name = "modelDataGridViewTextBoxColumn";
+            // 
+            // malfunctionDataGridViewTextBoxColumn
+            // 
+            this.malfunctionDataGridViewTextBoxColumn.DataPropertyName = "Malfunction";
+            this.malfunctionDataGridViewTextBoxColumn.HeaderText = "Неисправность";
+            this.malfunctionDataGridViewTextBoxColumn.Name = "malfunctionDataGridViewTextBoxColumn";
+            this.malfunctionDataGridViewTextBoxColumn.Width = 190;
+            // 
+            // fIODataGridViewTextBoxColumn
+            // 
+            this.fIODataGridViewTextBoxColumn.DataPropertyName = "FIO";
+            this.fIODataGridViewTextBoxColumn.HeaderText = "Клиент";
+            this.fIODataGridViewTextBoxColumn.Name = "fIODataGridViewTextBoxColumn";
+            // 
+            // phonenumberDataGridViewTextBoxColumn
+            // 
+            this.phonenumberDataGridViewTextBoxColumn.DataPropertyName = "Phone_number";
+            this.phonenumberDataGridViewTextBoxColumn.HeaderText = "Телефон";
+            this.phonenumberDataGridViewTextBoxColumn.Name = "phonenumberDataGridViewTextBoxColumn";
+            // 
+            // homeTableBindingSource
+            // 
+            this.homeTableBindingSource.DataMember = "HomeTable";
+            this.homeTableBindingSource.DataSource = this.original_DaddyJobs;
+            // 
+            // originalDaddyJobsBindingSource3
+            // 
+            this.originalDaddyJobsBindingSource3.DataSource = this.original_DaddyJobs;
+            this.originalDaddyJobsBindingSource3.Position = 0;
+            // 
+            // homeTableTableAdapter
+            // 
+            this.homeTableTableAdapter.ClearBeforeFill = true;
+            // 
+            // type_of_repairTableAdapter
+            // 
+            this.type_of_repairTableAdapter.ClearBeforeFill = true;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.textBox15);
+            this.groupBox4.Controls.Add(this.label33);
+            this.groupBox4.Controls.Add(this.dataGridView3);
+            this.groupBox4.Location = new System.Drawing.Point(8, 27);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(782, 337);
+            this.groupBox4.TabIndex = 33;
+            this.groupBox4.TabStop = false;
+            // 
+            // textBox15
+            // 
+            this.textBox15.Location = new System.Drawing.Point(57, 17);
+            this.textBox15.Name = "textBox15";
+            this.textBox15.Size = new System.Drawing.Size(144, 20);
+            this.textBox15.TabIndex = 34;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(10, 20);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(42, 13);
+            this.label33.TabIndex = 33;
+            this.label33.Text = "Поиск:";
+            // 
+            // справочникиToolStripMenuItem
+            // 
+            this.справочникиToolStripMenuItem.Name = "справочникиToolStripMenuItem";
+            this.справочникиToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
+            this.справочникиToolStripMenuItem.Text = "Справочники";
+            // 
+            // Main_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -1329,12 +1549,13 @@
             this.Controls.Add(this.label10);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "Form2";
+            this.Name = "Main_Form";
             this.Text = "Папа Джобс - Главная";
             this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -1345,6 +1566,8 @@
             this.menuStrip1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.typeofrepairBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.original_DaddyJobs3)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -1353,6 +1576,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.sparepartBindingSource3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nameofworkBindingSource7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.typeofrepairBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.originalDaddyJobsBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.typeofrepairBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.originalDaddyJobsBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.original_DaddyJobs1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.daddy_JobsDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nameofworkBindingSource5)).EndInit();
@@ -1379,6 +1606,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.originalDaddyJobs1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sparepartBindingSource4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.workBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.originalDaddyJobsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.homeTableBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.originalDaddyJobsBindingSource3)).EndInit();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1519,5 +1752,31 @@
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.ToolStripMenuItem рассылкаToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem отчетToolStripMenuItem;
+        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.BindingSource originalDaddyJobsBindingSource;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.BindingSource originalDaddyJobsBindingSource1;
+        private System.Windows.Forms.BindingSource typeofrepairBindingSource;
+        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.BindingSource originalDaddyJobsBindingSource2;
+        private System.Windows.Forms.BindingSource typeofrepairBindingSource1;
+        private System.Windows.Forms.BindingSource originalDaddyJobsBindingSource3;
+        private System.Windows.Forms.BindingSource homeTableBindingSource;
+        private Original_DaddyJobsTableAdapters.HomeTableTableAdapter homeTableTableAdapter;
+        private Original_DaddyJobs original_DaddyJobs3;
+        private System.Windows.Forms.BindingSource typeofrepairBindingSource2;
+        private Original_DaddyJobsTableAdapters.Type_of_repairTableAdapter type_of_repairTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn devicecodeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn naminationDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn expr1DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn modelDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn malfunctionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fIODataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn phonenumberDataGridViewTextBoxColumn;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.ToolStripMenuItem главнаяToolStripMenuItem;
+        private System.Windows.Forms.TextBox textBox15;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.ToolStripMenuItem справочникиToolStripMenuItem;
     }
 }
