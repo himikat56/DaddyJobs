@@ -42,3 +42,4 @@ C:\Users\Роман\Documents\Visual Studio 2015\Projects\Daddy_Jobs\Daddy_Jobs\
 C:\Users\Роман\Documents\Visual Studio 2015\Projects\Daddy_Jobs\Daddy_Jobs\obj\Debug\Daddy_Jobs.Main_Form.resources
 C:\Users\Роман\Documents\Visual Studio 2015\Projects\Daddy_Jobs\Daddy_Jobs\obj\Debug\Daddy_Jobs.Authorization_form.resources
 C:\Users\Роман\Documents\Visual Studio 2015\Projects\Daddy_Jobs\Daddy_Jobs\obj\Debug\Daddy_Jobs.Edit_form.resources
+C:\Users\Роман\Documents\Visual Studio 2015\Projects\Daddy_Jobs\Daddy_Jobs\obj\Debug\Daddy_Jobs.Edit_directory.resources

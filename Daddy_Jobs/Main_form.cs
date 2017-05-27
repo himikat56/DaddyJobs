@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Text.RegularExpressions;
 
 namespace Daddy_Jobs
 {
@@ -66,6 +67,7 @@ namespace Daddy_Jobs
             this.type_of_repairTableAdapter.Fill(this.original_DaddyJobs3.Type_of_repair);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "original_DaddyJobs.HomeTable". При необходимости она может быть перемещена или удалена.
             this.homeTableTableAdapter.Fill(this.original_DaddyJobs.HomeTable);
+            ClearHomeTable();
             // TODO: данная строка кода позволяет загрузить данные в таблицу "original_DaddyJobs.Type_of_repair". При необходимости она может быть перемещена или удалена.
             this.type_of_repairTableAdapter.Fill(this.original_DaddyJobs.Type_of_repair);
             this.dataPaymentFormTableAdapter.Fill(this.original_DaddyJobs.DataPaymentForm);
@@ -484,6 +486,59 @@ namespace Daddy_Jobs
         {
             HideGroupBox();
             groupBox4.Show();
+        }
+
+        private void textBox15_TextChanged(object sender, EventArgs e)
+        {
+            if (textBox15.Text != "")
+            {
+                using (SqlConnection conn = new SqlConnection(GlobalConnection))
+                {
+                    conn.Open();
+
+                    using (SqlCommand com = conn.CreateCommand())
+                    {
+                            var regdev = Regex.Match(textBox15.Text, @"[0-9][0-9]+(?:\.[0-9]*)?");
+                            int devid = 0;
+                            if (regdev.Value.ToString() == "" || regdev.Value.ToString() == null) { devid = 0; } else devid = Convert.ToInt32(regdev.Value.ToString());
+                            SqlDataAdapter da = new SqlDataAdapter(@"SELECT Device.Device_code, Status.Namination, Manufacturer.Namination AS Expr1, Device.Model, Device.IMEI, Device.Malfunction, Client.FIO, Client.Phone_number
+FROM            Client INNER JOIN
+                         Device ON Client.Client_code = Device.Client_code INNER JOIN
+                         Status ON Device.Status_code = Status.Status_code INNER JOIN
+                         Manufacturer ON Device.Manufacturer_code = Manufacturer.Manufacturer_code
+WHERE Device.Device_code = " + devid.ToString() + " or Device.IMEI like '%" + textBox15.Text + "%' or Client.FIO like '%" + textBox15.Text + "%'", conn);
+                            SqlCommandBuilder cb = new SqlCommandBuilder(da);
+                            DataSet ds = new DataSet();
+                            da.Fill(ds, "Client,Device,Status,Manufacturer");
+                            dataGridView3.DataSource = ds.Tables["Client,Device,Status,Manufacturer"];
+                    }
+                    conn.Close();
+                }//
+            }
+            else ClearHomeTable();
+        }
+        private void ClearHomeTable()
+        {
+            using (SqlConnection conn = new SqlConnection(GlobalConnection))
+            {
+                conn.Open();
+                SqlDataAdapter da = new SqlDataAdapter(@"SELECT Device.Device_code, Status.Namination, Manufacturer.Namination AS Expr1, Device.Model, Device.IMEI, Device.Malfunction, Client.FIO, Client.Phone_number
+                         FROM Client INNER JOIN
+                         Device ON Client.Client_code = Device.Client_code INNER JOIN
+                         Status ON Device.Status_code = Status.Status_code INNER JOIN
+                         Manufacturer ON Device.Manufacturer_code = Manufacturer.Manufacturer_code", conn);
+                SqlCommandBuilder cb = new SqlCommandBuilder(da);
+                DataSet ds = new DataSet();
+                da.Fill(ds, "Client,Device,Status,Manufacturer");
+                dataGridView3.DataSource = ds.Tables["Client,Device,Status,Manufacturer"];
+                conn.Close();
+            }
+        }
+
+        private void справочникиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form ditF = new Edit_directory();
+            ditF.Show();
         }
     }
 }

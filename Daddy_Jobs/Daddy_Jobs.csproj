@@ -76,6 +76,12 @@
     <Compile Include="Authorization_form.Designer.cs">
       <DependentUpon>Authorization_form.cs</DependentUpon>
     </Compile>
+    <Compile Include="Edit_directory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit_directory.Designer.cs">
+      <DependentUpon>Edit_directory.cs</DependentUpon>
+    </Compile>
     <Compile Include="Edit_form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +112,9 @@
     </Compile>
     <EmbeddedResource Include="Authorization_form.resx">
       <DependentUpon>Authorization_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit_directory.resx">
+      <DependentUpon>Edit_directory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Edit_form.resx">
       <DependentUpon>Edit_form.cs</DependentUpon>

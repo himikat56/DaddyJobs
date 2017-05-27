@@ -5241,6 +5241,8 @@ namespace Daddy_Jobs {
             
             private global::System.Data.DataColumn columnPhone_number;
             
+            private global::System.Data.DataColumn columnIMEI;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public HomeTableDataTable() {
@@ -5332,6 +5334,14 @@ namespace Daddy_Jobs {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn IMEIColumn {
+                get {
+                    return this.columnIMEI;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -5367,7 +5377,7 @@ namespace Daddy_Jobs {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public HomeTableRow AddHomeTableRow(string Namination, string Expr1, string Model, string Malfunction, string FIO, string Phone_number) {
+            public HomeTableRow AddHomeTableRow(string Namination, string Expr1, string Model, string Malfunction, string FIO, string Phone_number, string IMEI) {
                 HomeTableRow rowHomeTableRow = ((HomeTableRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -5376,7 +5386,8 @@ namespace Daddy_Jobs {
                         Model,
                         Malfunction,
                         FIO,
-                        Phone_number};
+                        Phone_number,
+                        IMEI};
                 rowHomeTableRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowHomeTableRow);
                 return rowHomeTableRow;
@@ -5413,6 +5424,7 @@ namespace Daddy_Jobs {
                 this.columnMalfunction = base.Columns["Malfunction"];
                 this.columnFIO = base.Columns["FIO"];
                 this.columnPhone_number = base.Columns["Phone_number"];
+                this.columnIMEI = base.Columns["IMEI"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5432,6 +5444,8 @@ namespace Daddy_Jobs {
                 base.Columns.Add(this.columnFIO);
                 this.columnPhone_number = new global::System.Data.DataColumn("Phone_number", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPhone_number);
+                this.columnIMEI = new global::System.Data.DataColumn("IMEI", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnIMEI);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnDevice_code}, true));
                 this.columnDevice_code.AutoIncrement = true;
@@ -5446,6 +5460,7 @@ namespace Daddy_Jobs {
                 this.columnMalfunction.MaxLength = 128;
                 this.columnFIO.MaxLength = 128;
                 this.columnPhone_number.MaxLength = 20;
+                this.columnIMEI.MaxLength = 64;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8601,6 +8616,22 @@ namespace Daddy_Jobs {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string IMEI {
+                get {
+                    try {
+                        return ((string)(this[this.tableHomeTable.IMEIColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'IMEI\' в таблице \'HomeTable\' равно DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableHomeTable.IMEIColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsNaminationNull() {
                 return this.IsNull(this.tableHomeTable.NaminationColumn);
             }
@@ -8669,6 +8700,18 @@ namespace Daddy_Jobs {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetPhone_numberNull() {
                 this[this.tableHomeTable.Phone_numberColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsIMEINull() {
+                return this.IsNull(this.tableHomeTable.IMEIColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetIMEINull() {
+                this[this.tableHomeTable.IMEIColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -14526,6 +14569,7 @@ FROM            Spare_part INNER JOIN
             tableMapping.ColumnMappings.Add("Malfunction", "Malfunction");
             tableMapping.ColumnMappings.Add("FIO", "FIO");
             tableMapping.ColumnMappings.Add("Phone_number", "Phone_number");
+            tableMapping.ColumnMappings.Add("IMEI", "IMEI");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -14542,7 +14586,7 @@ FROM            Spare_part INNER JOIN
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT        Device.Device_code, Status.Namination, Manufacturer.Namination AS Expr1, Device.Model, Device.Malfunction, Client.FIO, Client.Phone_number
+            this._commandCollection[0].CommandText = @"SELECT        Device.Device_code, Status.Namination, Manufacturer.Namination AS Expr1, Device.Model, Device.IMEI, Device.Malfunction, Client.FIO, Client.Phone_number
 FROM            Client INNER JOIN
                          Device ON Client.Client_code = Device.Client_code INNER JOIN
                          Status ON Device.Status_code = Status.Status_code INNER JOIN

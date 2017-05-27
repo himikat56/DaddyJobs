@@ -64,6 +64,7 @@
             this.смсУведомлениеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.рассылкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.отчетToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.справочникиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.помощьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.помощьToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -178,17 +179,18 @@
             this.naminationDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.expr1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.modelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iMEIDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.malfunctionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fIODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.phonenumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.homeTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.homeTableBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.originalDaddyJobsBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.homeTableTableAdapter = new Daddy_Jobs.Original_DaddyJobsTableAdapters.HomeTableTableAdapter();
             this.type_of_repairTableAdapter = new Daddy_Jobs.Original_DaddyJobsTableAdapters.Type_of_repairTableAdapter();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.textBox15 = new System.Windows.Forms.TextBox();
             this.label33 = new System.Windows.Forms.Label();
-            this.справочникиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.manufacturerBindingSource)).BeginInit();
@@ -235,7 +237,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.workBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.originalDaddyJobsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.homeTableBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.homeTableBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.originalDaddyJobsBindingSource3)).BeginInit();
             this.groupBox4.SuspendLayout();
             this.SuspendLayout();
@@ -534,6 +536,13 @@
             this.отчетToolStripMenuItem.Name = "отчетToolStripMenuItem";
             this.отчетToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
             this.отчетToolStripMenuItem.Text = "Отчет";
+            // 
+            // справочникиToolStripMenuItem
+            // 
+            this.справочникиToolStripMenuItem.Name = "справочникиToolStripMenuItem";
+            this.справочникиToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
+            this.справочникиToolStripMenuItem.Text = "Справочники";
+            this.справочникиToolStripMenuItem.Click += new System.EventHandler(this.справочникиToolStripMenuItem_Click);
             // 
             // помощьToolStripMenuItem
             // 
@@ -1433,10 +1442,11 @@
             this.naminationDataGridViewTextBoxColumn1,
             this.expr1DataGridViewTextBoxColumn,
             this.modelDataGridViewTextBoxColumn,
+            this.iMEIDataGridViewTextBoxColumn,
             this.malfunctionDataGridViewTextBoxColumn,
             this.fIODataGridViewTextBoxColumn,
             this.phonenumberDataGridViewTextBoxColumn});
-            this.dataGridView3.DataSource = this.homeTableBindingSource;
+            this.dataGridView3.DataSource = this.homeTableBindingSource1;
             this.dataGridView3.Location = new System.Drawing.Point(6, 52);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.Size = new System.Drawing.Size(770, 279);
@@ -1449,38 +1459,46 @@
             this.devicecodeDataGridViewTextBoxColumn.HeaderText = "Код";
             this.devicecodeDataGridViewTextBoxColumn.Name = "devicecodeDataGridViewTextBoxColumn";
             this.devicecodeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.devicecodeDataGridViewTextBoxColumn.Width = 50;
+            this.devicecodeDataGridViewTextBoxColumn.Width = 30;
             // 
             // naminationDataGridViewTextBoxColumn1
             // 
             this.naminationDataGridViewTextBoxColumn1.DataPropertyName = "Namination";
             this.naminationDataGridViewTextBoxColumn1.HeaderText = "Статус";
             this.naminationDataGridViewTextBoxColumn1.Name = "naminationDataGridViewTextBoxColumn1";
-            this.naminationDataGridViewTextBoxColumn1.Width = 80;
             // 
             // expr1DataGridViewTextBoxColumn
             // 
             this.expr1DataGridViewTextBoxColumn.DataPropertyName = "Expr1";
             this.expr1DataGridViewTextBoxColumn.HeaderText = "Производитель";
             this.expr1DataGridViewTextBoxColumn.Name = "expr1DataGridViewTextBoxColumn";
+            this.expr1DataGridViewTextBoxColumn.Width = 90;
             // 
             // modelDataGridViewTextBoxColumn
             // 
             this.modelDataGridViewTextBoxColumn.DataPropertyName = "Model";
             this.modelDataGridViewTextBoxColumn.HeaderText = "Модель";
             this.modelDataGridViewTextBoxColumn.Name = "modelDataGridViewTextBoxColumn";
+            this.modelDataGridViewTextBoxColumn.Width = 90;
+            // 
+            // iMEIDataGridViewTextBoxColumn
+            // 
+            this.iMEIDataGridViewTextBoxColumn.DataPropertyName = "IMEI";
+            this.iMEIDataGridViewTextBoxColumn.HeaderText = "IMEI";
+            this.iMEIDataGridViewTextBoxColumn.Name = "iMEIDataGridViewTextBoxColumn";
+            this.iMEIDataGridViewTextBoxColumn.Width = 115;
             // 
             // malfunctionDataGridViewTextBoxColumn
             // 
             this.malfunctionDataGridViewTextBoxColumn.DataPropertyName = "Malfunction";
-            this.malfunctionDataGridViewTextBoxColumn.HeaderText = "Неисправность";
+            this.malfunctionDataGridViewTextBoxColumn.HeaderText = "Неисправноть ";
             this.malfunctionDataGridViewTextBoxColumn.Name = "malfunctionDataGridViewTextBoxColumn";
-            this.malfunctionDataGridViewTextBoxColumn.Width = 190;
+            this.malfunctionDataGridViewTextBoxColumn.Width = 117;
             // 
             // fIODataGridViewTextBoxColumn
             // 
             this.fIODataGridViewTextBoxColumn.DataPropertyName = "FIO";
-            this.fIODataGridViewTextBoxColumn.HeaderText = "Клиент";
+            this.fIODataGridViewTextBoxColumn.HeaderText = "ФИО";
             this.fIODataGridViewTextBoxColumn.Name = "fIODataGridViewTextBoxColumn";
             // 
             // phonenumberDataGridViewTextBoxColumn
@@ -1488,11 +1506,12 @@
             this.phonenumberDataGridViewTextBoxColumn.DataPropertyName = "Phone_number";
             this.phonenumberDataGridViewTextBoxColumn.HeaderText = "Телефон";
             this.phonenumberDataGridViewTextBoxColumn.Name = "phonenumberDataGridViewTextBoxColumn";
+            this.phonenumberDataGridViewTextBoxColumn.Width = 85;
             // 
-            // homeTableBindingSource
+            // homeTableBindingSource1
             // 
-            this.homeTableBindingSource.DataMember = "HomeTable";
-            this.homeTableBindingSource.DataSource = this.original_DaddyJobs;
+            this.homeTableBindingSource1.DataMember = "HomeTable";
+            this.homeTableBindingSource1.DataSource = this.original_DaddyJobs3;
             // 
             // originalDaddyJobsBindingSource3
             // 
@@ -1524,6 +1543,7 @@
             this.textBox15.Name = "textBox15";
             this.textBox15.Size = new System.Drawing.Size(144, 20);
             this.textBox15.TabIndex = 34;
+            this.textBox15.TextChanged += new System.EventHandler(this.textBox15_TextChanged);
             // 
             // label33
             // 
@@ -1533,12 +1553,6 @@
             this.label33.Size = new System.Drawing.Size(42, 13);
             this.label33.TabIndex = 33;
             this.label33.Text = "Поиск:";
-            // 
-            // справочникиToolStripMenuItem
-            // 
-            this.справочникиToolStripMenuItem.Name = "справочникиToolStripMenuItem";
-            this.справочникиToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
-            this.справочникиToolStripMenuItem.Text = "Справочники";
             // 
             // Main_Form
             // 
@@ -1608,7 +1622,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.workBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.originalDaddyJobsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.homeTableBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.homeTableBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.originalDaddyJobsBindingSource3)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
@@ -1761,22 +1775,24 @@
         private System.Windows.Forms.BindingSource originalDaddyJobsBindingSource2;
         private System.Windows.Forms.BindingSource typeofrepairBindingSource1;
         private System.Windows.Forms.BindingSource originalDaddyJobsBindingSource3;
-        private System.Windows.Forms.BindingSource homeTableBindingSource;
         private Original_DaddyJobsTableAdapters.HomeTableTableAdapter homeTableTableAdapter;
         private Original_DaddyJobs original_DaddyJobs3;
         private System.Windows.Forms.BindingSource typeofrepairBindingSource2;
         private Original_DaddyJobsTableAdapters.Type_of_repairTableAdapter type_of_repairTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn devicecodeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn naminationDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn expr1DataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn modelDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn malfunctionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fIODataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn phonenumberDataGridViewTextBoxColumn;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.ToolStripMenuItem главнаяToolStripMenuItem;
         private System.Windows.Forms.TextBox textBox15;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.ToolStripMenuItem справочникиToolStripMenuItem;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.BindingSource homeTableBindingSource1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn devicecodeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn naminationDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn expr1DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn modelDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iMEIDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn malfunctionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fIODataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn phonenumberDataGridViewTextBoxColumn;
     }
 }
